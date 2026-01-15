@@ -72,7 +72,7 @@ a {
   transition: opacity 0.5s;          /* Change thickness */
 }
 /*//////////// over write navbar ////////////////*/
-.css-zejtlo-MuiPaper-root-MuiAppBar-root,.css-1k7zr6g-MuiPaper-root-MuiAppBar-root   {
+.dark-mode-header,.light-mode-header   {
   top:1rem !important;
   left: 50% !important;
   /* right: 50% !important; */
@@ -86,9 +86,9 @@ a {
   padding: 0 !important;
 }
 @media screen and (max-width: 900px)  {
-  .css-zejtlo-MuiPaper-root-MuiAppBar-root,.css-djg71g-MuiPaper-root-MuiAppBar-root  {
+  .dark-mode-header,.light-mode-header  {
  
-    width:100vw !important;
+    width:95 !important;
 
   }
 }

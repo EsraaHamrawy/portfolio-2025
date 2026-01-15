@@ -84,7 +84,7 @@ function Header() {
         allMainElement.style.color = "white";
       } else {
         // Light mode
-        allMainElement.style.background = "rgb(231 217 251)";
+        allMainElement.style.background = "rgb(231 217 251) ";
         allMainElement.style.color = "#333";
       }
     }
@@ -263,6 +263,7 @@ function Header() {
           transition: "all 0.3s ease",
           py: 1
         }}
+        className={darkMode ? "dark-mode-header" : "light-mode-header"}
       >
         <Toolbar sx={{ justifyContent: "space-between", px: { xs: 2, md: 4 } }}>
           {/* Mobile Menu Icon */}
