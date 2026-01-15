@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>signin</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/signUp.css">
+</head>
+
+<body>
+
+    <section id="signUp" class="p-5 min-vh-100">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="justify-content-center align-items-center d-flex min-vh-100">
+                        <div class="layer">
+                            <div class="w-75">
+                                <h1 class="my-3 text-center hover-one">Registration</h1>
+
+
+                                <div class="d-flex icon-div">
+                                    <input id="userName" type="text" class="form-control "
+                                        placeholder="Enter your name">
+                                    <i id="removeIconOne" class="fa-solid fa-user fa-bounce icon-in-div"></i>
+                                </div>
+                                <div id="nameRgex" class="takeCare m-2 p-2 d-none">Please Enter First Name And Second
+                                    Name</div>
+
+                                <div class="my-2 icon-div">
+                                    <input id="userEmail" type="email" class="form-control"
+                                        placeholder="Enter your email">
+                                    <i id="removeIconTwo" class="fa-solid fa-envelope fa-bounce icon-in-div"></i>
+                                </div>
+                                <div id="emailRgex" class="takeCare m-2 p-2 d-none">Please Enter Your Email</div>
+
+                                <div class="mb-2 icon-div">
+                                    <input id="userPassword" type="password" class="form-control"
+                                        placeholder="Enter your password">
+                                    <i id="removeIconThree" class="fa-solid fa-lock fa-bounce icon-in-div"></i>
+                                </div>
+                                <div id="passwordRgex" class="takeCare m-2 p-2 d-none">Please Enter Your Password <p
+                                        class="mt-3">You Should Have lowercase letter</p>
+                                    <p>You Should Have uppercase letter</p>
+                                    <p>You Should Have one special character</p>
+                                    <p>You Should Have one number</p>
+
+                                </div>
+
+                                <div id="sameReg" class="takeCare m-2 p-1 d-none">
+                                    <p>Sorry We Have This Data Before</p>
+                                </div>
+
+                                <div class="d-block text-center">
+                                    <button id="signinBtnAdd" class="btn btn-dark w-75 fw-bolder">Sign Up</button>
+                                </div>
+
+
+
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <p class="m-0 p-0">Already have account?</p>
+                                    <a id="loginLink" href="#" class="fw-bolder">Login</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/signUp.js"></script>
+</body>
+
+</html>

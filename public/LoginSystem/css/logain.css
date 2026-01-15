@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #213d56;
+}
+
+
+#login {
+    background-image: url(../image/background.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.layer {
+    position: relative;
+    width: 500px;
+    height: 540px;
+    color: blueviolet;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+}
+h1.hover-one {
+    transition: 0.3s;
+    color: #213d56;
+}
+.hover-one:hover{
+    color: black;
+}
+
+
+
+.icon-div {
+    position: relative;
+}
+
+.icon-in-div {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    color: #213d56;
+    transition: 0.3s;
+}
+
+.icon-in-div:hover{
+    color: black;
+}
+
+.takeCare {
+    background-color: #213d56b7;
+    color: white;
+    border: turquoise 2px solid;
+    border-radius: 10px;
+}

@@ -1,0 +1,125 @@
+import { Link, NavLink, useLocation } from "react-router-dom";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import React from "react";
+
+import User from "../../general/user/user.component";
+import Notification from "../notification/notification.component";
+import SerachBar from "../serachBar/serachBar.component";
+import Socialmedia from "../socialmedia/socialmedia.component.jsx";
+import styles from "./navbar.module.css";
+const Navbar = ({ navbarTitle,sidebarData }) => {
+  const location = useLocation();
+  const { pathname } = location;
+
+  return (
+    
+    <div className={styles.navbar}>
+      <div className={styles.pageTitle}>{navbarTitle}</div>
+
+      <div className={styles.sideBarCont}>
+        <div className={styles.sideBarLinks}>
+          {sidebarData.map((item, index) => (
+            <div
+              key={index}
+              className={item.childLinks ? "parentLinkContainer" : ""}
+            >
+               {!item.parentText && (
+                <NavLink
+                  key={index}
+                  className={({ isActive }) => {
+                    // ✅ Home is active when on "/" or "/home"
+                    const isHomeActive =
+                      (item.to === "/home" &&
+                        (pathname === "/" || pathname === "/home")) ||
+                      isActive;
+
+                    return [
+                      isHomeActive ? `${styles.active}` : "",
+                      `${styles.link}`,
+                    ].join(" ");
+                  }}
+                  to={item.to}
+                >
+                  {item.icon}
+                  <span>{item.text}</span>
+                </NavLink>
+              )}
+
+              {item.parentText && (
+                <>
+                  {/* <Accordion>
+                    <AccordionSummary
+                      expandIcon={
+                        <ExpandMoreIcon
+                          className={`accordionExpandIcon ${item.childLinks
+                              .map((link) => link.to)
+                              .includes(pathname) && `${styles.activeicon}`
+                            }`}
+                        />
+                      }
+                      aria-controls="panel1-content"
+                      id="panel1-header"
+                      className={`${styles.parentAccordion} ${item.childLinks
+                          .map((link) => link.to)
+                          .includes(pathname) && `${styles.activeParent}`
+                        }`}
+                    >
+                      <div className={`${styles.parentLink}`}>
+                        {item.parentIcon}
+                        <span>{item.parentText}</span>
+                      </div>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      {item.childLinks.map((childLink, childIndex) => (
+                        <NavLink
+                          key={childIndex}
+                          className={({ isActive }) =>
+                            [
+                              isActive ? `${styles.active}` : "",
+                              `${styles.childLink}`,
+                            ].join(" ")
+                          }
+                          to={childLink.to}
+                        >
+                          {childLink.icon &&
+                            React.cloneElement(childLink.icon, {
+                              className: styles.dotIcon,
+                            })}
+                          <span>{childLink.text}</span>
+                        </NavLink>
+                      ))}
+                    </AccordionDetails>
+                  </Accordion> */}
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+        
+      </div>
+
+
+      <div className={styles.items}>
+
+     
+
+        {/* <SerachBar /> */}
+        <div>
+        <Socialmedia/>
+        </div>
+       
+        {/* <Notification /> */}
+        <User />
+
+       
+
+
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

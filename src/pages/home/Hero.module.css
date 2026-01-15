@@ -1,0 +1,230 @@
+
+ .container{
+  margin-bottom:3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+ }
+  .heroContaner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+  
+  }
+
+  .heroText p {
+    font-size: 1rem;
+  }
+  .colorText{
+    color: var(--color-primary); 
+  }
+  .currentWork{
+    color: var(--color-primary);
+    display: flex;
+  }
+  .heroText h1 {
+    font-size: 3rem;
+  }
+  
+  .heroText h3 {
+    /* color: var(--color-primary); */
+    margin: .7rem 0;
+  }
+  .MyWorklogo{
+    width: 6rem;
+    /* height: 3rem; */
+  }
+  .smallResume {
+    margin-bottom: 1rem !important;
+  }
+  
+  .socialMedia {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    /* padding-top: 2rem; */
+    /* padding-left: 1rem; */
+    padding-bottom: 1rem;
+  }
+  
+  .socialMedia img,
+  .socialMedia span {
+    font-size: 3rem;
+    width: 3.5rem;
+  }
+  
+  .button {
+    margin-top: 5rem;
+    padding: 1rem 3rem;
+    background-color: rgba(138, 43, 226, 0.5);
+    border-radius: 8px;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.15),
+    0 0 3px rgba(138, 43, 226, 0.3);
+  }
+  .button:hover {
+   
+    background-color:  transparent;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.15),
+    0 0 3px rgba(138, 43, 226, 0.3);
+  }
+  .skilscontainer{
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column
+  }
+  .aboutSection {
+  margin-top: -6rem;
+  /* text-align: center; */
+}
+
+/* .aboutText {
+  text-align: center;
+  max-width: 700px;
+}
+
+.Textcolor {
+  color: #007bff;
+} */
+
+  .Textcolor{
+    color: var(--color-primary);
+  }
+  .heroImage img {
+    width: 100%;
+    max-width: 70%;       /* Prevent over-expanding */
+    display: block;
+    margin-left: auto;
+  }
+  
+  /* Animation Classes */
+  .fadeInUp {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  .fadeInRight {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: fadeInRight 0.8s ease forwards;
+  }
+  
+  .delay200 {
+    animation-delay: 0.2s;
+  }
+  
+  .delay400 {
+    animation-delay: 0.4s;
+  }
+  
+  .delay600 {
+    animation-delay: 0.6s;
+  }
+  
+  .delay800 {
+    animation-delay: 0.8s;
+  }
+  
+  .delay1000 {
+    animation-delay: 1s;
+  }
+  .flex{
+    display: flex;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @media (max-width: 960px) {
+    .container {
+      display: block;
+      margin-top: 15%;
+    }
+  
+    .heroText h1 {
+      font-size: 5rem;
+    }
+  
+    .heroImage {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      margin-top: 35%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      margin-top: 45%;
+    }
+  }
+  /* {✅ SKILLS SECTION} */
+  .skillCard {
+    background: rgba(132, 60, 188, 0.15) ;
+    padding: 2rem 1rem;
+ 
+    border-radius: 8px;
+    /* box-shadow: 0 0 3px rgba(255, 255, 255, 0.15), 0 0 3px rgba(138, 43, 226, 0.3); */
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: default;
+    height: 100%;
+  }
+  
+  .skillCard:hover {
+    background-color: transparent;
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.15), 0 0 3px rgba(138, 43, 226, 0.3);
+    color: var(--color-primary) !important; 
+  }
+  
+  .skillIcon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  .skillName {
+    font-size: 1rem;
+    font-weight: 600;
+    /* color: white; */
+    letter-spacing: 0.5px;
+  }
+  
+  @media (max-width: 768px) {
+    .skillCard {
+      padding: 15px;
+    }
+  
+    .skillIcon {
+      font-size: 1.5rem;
+    }
+  
+    .skillName {
+      font-size: 0.9rem;
+    }
+  }
+  

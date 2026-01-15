@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #213d56;
+}
+
+
+#Welcome {
+    background-image: url(../image/background.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.layer {
+    position: relative;
+    width: 500px;
+    height: 540px;
+    color: blueviolet;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+}
+
+.work {
+    width: 400px;
+    height: 440px;
+    /* background-color: white; */
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url(../image/pngegg.png);
+    background-position: center center;
+    background-size: cover;
+}

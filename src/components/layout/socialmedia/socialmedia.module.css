@@ -1,0 +1,45 @@
+.socialLinkContainer{
+display: flex;
+gap: 1rem;
+align-items: center;
+justify-content: center;
+
+}
+
+.socialLink {
+  color: #ffffff7a;             
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:  .5rem;
+  background: rgba(132, 60, 188, 0.15);
+  border-radius: 50%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.3px);
+  -webkit-backdrop-filter: blur(14.3px);
+  border: 1px solid rgba(132, 60, 188, 0.38);
+}
+.socialLink svg{
+    width: .8rem;
+    height: .8rem;
+}
+
+.socialLink:hover {
+  transform: scale(1.2);
+}
+
+/* Optional: different hover colors per platform */
+.socialLink:nth-child(1):hover {
+  color: rgb(52, 141, 230);  /* LinkedIn blue */
+}
+
+.socialLink:nth-child(2):hover {
+  color: #ffffff;               /* GitHub black */
+}
+
+.socialLink:nth-child(3):hover {
+  color: rgb(234, 67, 53);   /* Gmail red */
+}

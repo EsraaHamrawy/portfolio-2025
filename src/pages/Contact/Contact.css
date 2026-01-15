@@ -1,0 +1,4 @@
+.formcontainer{
+    background: rgba(132, 60, 188, 0.15) !important;
+    backdrop-filter: blur(10px);
+}

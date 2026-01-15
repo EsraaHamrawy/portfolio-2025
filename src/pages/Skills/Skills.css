@@ -1,0 +1,68 @@
+.skills{
+    width: 100%;
+    /* min-height: 50vh; */
+
+}
+.skills h2{
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+.image-container{
+    width: 95%;
+    margin-right: 2rem;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    font-weight: 500; */
+    text-transform: none;
+    color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(14px) saturate(150%);
+    box-shadow: rgba(0, 0, 0, 0.5) 14px 5px 10px -13px, rgba(0, 0, 0, 0.6) 0px 6px 18px -17px, rgba(255, 255, 255, 0.05) 0px 0px 8px;
+    padding: 0.3rem ;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.16);
+    border-image: initial;
+    border-radius: 44px;
+    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04)); */
+    background: rgba(132, 60, 188, 0.15) ;
+    overflow: hidden;
+    transition: color 0.35s, 
+    border-color 0.35s, 
+    background 0.35s, 
+    box-shadow 0.35s, 
+    transform 0.4s cubic-bezier(0.16, 0.84, 0.44, 1);
+    white-space: nowrap;
+    flex: 0 0 auto;
+}
+.image-container:hover{
+    color: rgb(255, 255, 255);
+    /* box-shadow: rgba(0, 0, 0, 0.55) 0px 4px 14px -4px, rgba(0, 0, 0, 0.55) 0px 10px 26px -10px, rgba(150, 180, 255, 0.35) 0px 0px 14px; */
+     border-color: rgba(255, 255, 255, 0.35); 
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.07)); 
+    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.594), rgba(255, 255, 255, 0.07)); */
+    box-shadow: rgb(104 86 152 / 55%) 0px 4px 11px -4px, rgb(255 255 255 / 55%) 0px 10px 26px -39px, rgb(161 188 253 / 35%) 0px 0px -2px;
+}
+.reverse-marquee{
+    margin-top: 1rem;
+    margin-right: 2rem;
+}
+.skillicon{
+    width: 6rem;
+    height: 2.5rem;
+}
+
+@media screen and (max-width: 768px){
+    .skills{
+        margin-top: 5rem;
+    }
+    .image-container{
+        margin-right: 0;
+    }
+    .reverse-marquee{
+        margin: 6rem 0 -4rem;
+    }
+}

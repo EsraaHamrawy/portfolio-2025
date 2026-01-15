@@ -1,0 +1,84 @@
+.wedget {
+  /* your existing styles */
+  /* background: #11071F; */
+  color: var(--color-gray-0);
+  position: fixed;
+  min-height: calc(100% - 85px);
+  max-height: calc(100% - 85px);
+  overflow-y: auto;
+  top: 75px;
+  border-radius: 4px;
+  min-width: 90% ;
+  max-width: 99% ;
+  padding:0rem  1.5rem ;
+  /* box-shadow: 0 0 3px rgba(255, 255, 255, 0.15), 0 0 3px rgba(138, 43, 226, 0.3); */
+  /* Minimal scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(138, 43, 226, 0.5) transparent;
+}
+
+.bgParticles {
+  position: fixed;
+  /* UPDATED */
+  inset: 0;
+  z-index: -1;
+  /* still behind the content */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Keep your custom scrollbar as-is here */
+
+
+.wedget::-webkit-scrollbar {
+  width: 6px;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.15), 0 0 3px rgba(138, 43, 226, 0.3);
+}
+
+.wedget::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.wedget::-webkit-scrollbar-thumb {
+  /* background: rgba(138, 43, 226, 0.5); */
+  border-radius: 3px;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.15), 0 0 3px rgba(138, 43, 226, 0.3);
+}
+
+.wedget::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 34, 200, 0.7);
+}
+/* ////////////////////////////// */
+.Footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border-top: 1px solid var(--color-gray-1); */
+  box-shadow: 0 0px 3px rgba(255, 255, 255, 0.15),
+  0px 0px 3px rgba(138, 43, 226, 0.3);
+  height: 3rem;
+  /* filter: grayscale(1); */
+  position: fixed;
+  z-index: 22;
+  /* background: #11071f; */
+  /* background: rgba(132, 60, 188, 0.15); */
+  background: rgba(132, 60, 188, 0.15) !important;
+  backdrop-filter: blur(10px);
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+}
+.dotIcon {
+  width: 10px !important;
+}
+
+.sideBarCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 65px);
+}
