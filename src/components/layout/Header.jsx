@@ -94,11 +94,11 @@ function Header() {
     document.body.style.color = newDarkMode ? "white" : "#333";
     document.body.style.transition = "all 0.3s ease";
 
-    // Update header background based on mode
+    // Keep header styling consistent in both modes
     const headerElement = document.querySelector('.MuiAppBar-root');
     if (headerElement) {
-      headerElement.style.background = newDarkMode ? "transparent" : "rgba(255, 255, 255, 0.8)";
-      headerElement.style.color = newDarkMode ? "white" : "#333";
+      headerElement.style.background = "transparent";
+      headerElement.style.color = "white";
     }
   };
 
@@ -113,10 +113,12 @@ function Header() {
     <Box sx={{ 
       width: 280, 
       textAlign: "center", 
-      background: darkMode ? "black" : "rgba(255, 255, 255, 0.95)", 
+      background: "rgba(132, 60, 188, 0.15)",
+      boxShadow: "rgba(255, 255, 255, 0.15) 0px 0px 3px, rgba(138, 43, 226, 0.3) 0px 0px 3px",
       color: darkMode ? "white" : "#333",
       height: "100vh",
-      transition: "all 0.3s ease"
+      transition: "all 0.3s ease",
+      backdropFilter: "blur(12px)"
     }}>
       {/* Drawer Header */}
       <Box sx={{ 
@@ -124,9 +126,9 @@ function Header() {
         justifyContent: "space-between", 
         alignItems: "center", 
         p: 3, 
-        borderBottom: `1px solid ${darkMode ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.1)"}` 
+        borderBottom: "1px solid rgba(255,255,255,0.2)" 
       }}>
-        <Typography variant="h6" sx={{ fontWeight: "bold", fontSize: "1.4rem", color: darkMode ? "white" : "#333" }}>
+        <Typography variant="h6" sx={{ fontWeight: "bold", fontSize: "1.4rem", color: "white" }}>
           Portfolio
         </Typography>
         <IconButton onClick={handleDrawerToggle} color="inherit">
@@ -136,7 +138,7 @@ function Header() {
 
       {/* Navigation List */}
       <List sx={{ py: 3 }}>
-        {navItems.map((item) => (
+        {navItems.filter((item) => item.text !== "Contact").map((item) => (
           <ListItem key={item.text} disablePadding sx={{ mb: 1 }}>
             <ListItemButton 
               onClick={() => handleNavClick(item.id)}
@@ -145,13 +147,27 @@ function Header() {
                 borderRadius: "12px",
                 py: 1.5,
                 "&:hover": { 
-                  backgroundColor: darkMode ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)",
+                  backgroundColor: "rgba(255,255,255,0.1)",
                   transform: "translateX(8px)", 
                   transition: "all 0.3s ease" 
+                },
+                "&::after": {
+                  content: '""',
+                  position: "absolute",
+                  bottom: 6,
+                  left: "50%",
+                  width: "0",
+                  height: "1px",
+                  background: "linear-gradient(135deg,rgb(162, 108, 255) 0%, #764ba2 100%)",
+                  transition: "all 0.3s ease",
+                  transform: "translateX(-50%)"
+                },
+                "&:hover::after": {
+                  width: "85%"
                 }
               }}
             >
-              <ListItemIcon sx={{ color: darkMode ? "white" : "#333", minWidth: "45px", fontSize: "1.2rem" }}>
+              <ListItemIcon sx={{ color: "white", minWidth: "45px", fontSize: "1.2rem" }}>
                 {item.icon}
               </ListItemIcon>
               <ListItemText 
@@ -160,7 +176,7 @@ function Header() {
                   "& .MuiTypography-root": { 
                     fontWeight: "600", 
                     fontSize: "1.1rem",
-                    color: darkMode ? "white" : "#333"
+                    color: "white"
                   } 
                 }} 
               />
@@ -168,25 +184,6 @@ function Header() {
           </ListItem>
         ))}
       </List>
-
-      {/* Theme Toggle in Drawer */}
-      <Box sx={{ p: 2, borderBottom: `1px solid ${darkMode ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.1)"}` }}>
-        <Box sx={{ 
-          display: "flex", 
-          alignItems: "center", 
-          justifyContent: "space-between",
-          px: 2
-        }}>
-          <Typography sx={{ 
-            fontWeight: "600", 
-            fontSize: "1.1rem",
-            color: darkMode ? "white" : "#333"
-          }}>
-            {darkMode ? "Dark Mode" : "Light Mode"}
-          </Typography>
-          <ToggleSwitch darkMode={darkMode} onToggle={toggleDarkMode} />
-        </Box>
-      </Box>
 
       {/* Social Media Icons */}
       <Box sx={{ 
@@ -198,8 +195,8 @@ function Header() {
         justifyContent: "center", 
         gap: 2, 
         py: 3, 
-        borderTop: `1px solid ${darkMode ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.1)"}`,
-        backgroundColor: darkMode ? "rgba(0,0,0,0.1)" : "rgba(255,255,255,0.2)"
+        borderTop: "1px solid rgba(255,255,255,0.2)",
+        backgroundColor: "rgba(132, 60, 188, 0.15)"
       }}>
         <IconButton 
           color="inherit" 
@@ -209,7 +206,7 @@ function Header() {
           sx={{ 
             fontSize: "1.3rem",
             "&:hover": { 
-              backgroundColor: darkMode ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)",
+              backgroundColor: "rgba(255,255,255,0.1)",
               transform: "scale(1.1)" 
             } 
           }}
@@ -224,7 +221,7 @@ function Header() {
           sx={{ 
             fontSize: "1.3rem",
             "&:hover": { 
-              backgroundColor: darkMode ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)",
+              backgroundColor: "rgba(255,255,255,0.1)",
               transform: "scale(1.1)" 
             } 
           }}
@@ -239,7 +236,7 @@ function Header() {
           sx={{ 
             fontSize: "1.3rem",
             "&:hover": { 
-              backgroundColor: darkMode ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)",
+              backgroundColor: "rgba(255,255,255,0.1)",
               transform: "scale(1.1)" 
             } 
           }}
@@ -255,15 +252,15 @@ function Header() {
       <AppBar 
         component="nav" 
         sx={{ 
-          background: darkMode ? "transparent" : "rgba(255, 255, 255, 0.8)",
-          color: darkMode ? "#fff" : "#333",
+          background: "transparent",
+          color: "#fff",
           boxShadow: "0 2px 20px rgba(0,0,0,0.1)",
           backdropFilter: "blur(10px)",
-          borderBottom: darkMode ? "1px solid rgba(255,255,255,0.1)" : "1px solid rgba(0,0,0,0.1)",
+          borderBottom: "1px solid rgba(255,255,255,0.1)",
           transition: "all 0.3s ease",
           py: 1
         }}
-        className={darkMode ? "dark-mode-header" : "light-mode-header"}
+        className="dark-mode-header"
       >
         <Toolbar sx={{ justifyContent: "space-between", px: { xs: 2, md: 4 } }}>
           {/* Mobile Menu Icon */}
@@ -274,6 +271,7 @@ function Header() {
             onClick={handleDrawerToggle}
             sx={{ 
               display: { md: "none" },
+              color: "var(--color-primary)",
               "&:hover": { 
                 backgroundColor: darkMode ? "rgba(255,255,255,0.1)" : "rgba(255, 255, 255, 0.1)" 
               } 
@@ -347,7 +345,9 @@ function Header() {
         sx={{ 
           "& .MuiDrawer-paper": { 
             width: 280, 
-            boxShadow: "4px 0 20px rgba(0,0,0,0.2)",
+            background: "rgba(132, 60, 188, 0.15)",
+            boxShadow: "rgba(255, 255, 255, 0.15) 0px 0px 3px, rgba(138, 43, 226, 0.3) 0px 0px 3px",
+            backdropFilter: "blur(12px)",
             transition: "all 0.3s ease"
           } 
         }}

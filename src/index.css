@@ -87,8 +87,7 @@ a {
 }
 @media screen and (max-width: 900px)  {
   .dark-mode-header,.light-mode-header  {
- 
-    width:95 !important;
+    width:100% !important;
 
   }
 }

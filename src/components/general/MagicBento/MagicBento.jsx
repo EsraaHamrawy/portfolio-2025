@@ -1,6 +1,7 @@
 import { useRef, useEffect, useCallback, useState } from 'react';
 import { gsap } from 'gsap';
 import './MagicBento.css';
+import GlobalModal from '../Modal/GlobalModal.jsx';
 
 // Constants
 const DEFAULT_PARTICLE_COUNT = 12;
@@ -455,11 +456,11 @@ const GlobalSpotlight = ({
 };
 
 // Project Details Component
-const ProjectDetails = ({ details }) => {
+const ProjectDetails = ({ details, className = '' }) => {
   if (!details) return null;
 
   return (
-    <div className="project-details">
+    <div className={`project-details ${className}`.trim()}>
       {details.overview && (
         <>
           <h4>Overview</h4>
@@ -535,6 +536,7 @@ const MagicBento = ({
   const gridRef = useRef(null);
   const isMobile = useMobileDetection();
   const [activeDetailsIndex, setActiveDetailsIndex] = useState(null);
+  const activeCard = activeDetailsIndex !== null ? cardData[activeDetailsIndex] : null;
 
   const shouldDisableAnimations = disableAnimations || isMobile;
 
@@ -544,18 +546,6 @@ const MagicBento = ({
       // If clicking on a different card, close any open one and open the new one
       return prevIndex === index ? null : index;
     });
-  }, []);
-
-  // Close details when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (!e.target.closest('.info-hover') && !e.target.closest('.project-details')) {
-        setActiveDetailsIndex(null);
-      }
-    };
-
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
   }, []);
 
   const renderCard = useCallback((card, index) => {
@@ -605,9 +595,6 @@ const MagicBento = ({
                   </svg>
                 </button>
 
-                {activeDetailsIndex === index && card.details && (
-                  <ProjectDetails details={card.details} />
-                )}
               </div>
               
               {card.link && (
@@ -659,6 +646,38 @@ const MagicBento = ({
 
   return (
     <>
+      <GlobalModal
+        open={activeDetailsIndex !== null}
+        onClose={() => setActiveDetailsIndex(null)}
+        title={activeCard?.title || "Project Details"}
+      >
+        {activeCard && (
+          <div className="space-y-4">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <img
+                src={activeCard.img}
+                alt={activeCard.title || "Project image"}
+                className="h-20 w-20 rounded-xl object-cover"
+              />
+              <div className="space-y-2">
+                <p className="text-sm text-white/70">{activeCard.description}</p>
+                {activeCard.link && (
+                  <a
+                    href={activeCard.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-wide transition hover:bg-white/10"
+                  >
+                    View Project
+                  </a>
+                )}
+              </div>
+            </div>
+            <ProjectDetails details={activeCard.details} className="project-details--modal" />
+          </div>
+        )}
+      </GlobalModal>
+
       {enableSpotlight && (
         <GlobalSpotlight
           gridRef={gridRef}
