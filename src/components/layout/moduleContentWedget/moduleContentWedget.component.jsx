@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */ 
 import styles from "./moduleContentWedget.module.css";
-import Socialmedia from "../socialmedia/socialmedia.component.jsx";
+import Footer from "../footer/footer";
 import Card from "../../../components/layout/socialmedia/newSocial"
 const ModuleContentWedget = ({ children }) => {
   return (
@@ -9,9 +9,7 @@ const ModuleContentWedget = ({ children }) => {
    <div className={styles.wedget}>
     
       {children}
-      <div className={styles.Footer}>
-          <Socialmedia />
-        </div>
+     <Footer />
         </div>
     </div>
  

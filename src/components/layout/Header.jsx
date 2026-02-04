@@ -3,6 +3,7 @@ import { AppBar, Box, Toolbar, IconButton, Typography, Drawer, List, ListItem, L
 import { FaBars, FaHome, FaInfoCircle, FaProjectDiagram, FaChartBar, FaAward, FaEnvelope, FaCode, FaTimes, FaSun, FaMoon } from "react-icons/fa"; 
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa"; 
 import { RiTwitterXFill } from "react-icons/ri"; 
+import Footer from "./footer/footer";
 
 // Navigation items with section IDs
 const navItems = [
@@ -131,7 +132,7 @@ function Header() {
         <Typography variant="h6" sx={{ fontWeight: "bold", fontSize: "1.4rem", color: "white" }}>
           Portfolio
         </Typography>
-        <IconButton onClick={handleDrawerToggle} color="inherit">
+        <IconButton onClick={handleDrawerToggle} sx={{color:"#741bc7"}}>
           <FaTimes />
         </IconButton>
       </Box>
@@ -185,65 +186,8 @@ function Header() {
         ))}
       </List>
 
-      {/* Social Media Icons */}
-      <Box sx={{ 
-        position: "absolute", 
-        bottom: 0, 
-        left: 0, 
-        right: 0, 
-        display: "flex", 
-        justifyContent: "center", 
-        gap: 2, 
-        py: 3, 
-        borderTop: "1px solid rgba(255,255,255,0.2)",
-        backgroundColor: "rgba(132, 60, 188, 0.15)"
-      }}>
-        <IconButton 
-          color="inherit" 
-          component="a" 
-          href="https://www.linkedin.com/in/premnath-m/" 
-          target="_blank"
-          sx={{ 
-            fontSize: "1.3rem",
-            "&:hover": { 
-              backgroundColor: "rgba(255,255,255,0.1)",
-              transform: "scale(1.1)" 
-            } 
-          }}
-        >
-          <FaLinkedin />
-        </IconButton>
-        <IconButton 
-          color="inherit" 
-          component="a" 
-          href="https://github.com/M-Premnath" 
-          target="_blank"
-          sx={{ 
-            fontSize: "1.3rem",
-            "&:hover": { 
-              backgroundColor: "rgba(255,255,255,0.1)",
-              transform: "scale(1.1)" 
-            } 
-          }}
-        >
-          <FaGithub />
-        </IconButton>
-        <IconButton 
-          color="inherit" 
-          component="a" 
-          href="https://x.com/Premnath_T_M" 
-          target="_blank"
-          sx={{ 
-            fontSize: "1.3rem",
-            "&:hover": { 
-              backgroundColor: "rgba(255,255,255,0.1)",
-              transform: "scale(1.1)" 
-            } 
-          }}
-        >
-          <RiTwitterXFill />
-        </IconButton>
-      </Box>
+      {/* Footer of side bare*/}
+      <Footer />
     </Box>
   );
 
@@ -265,7 +209,7 @@ function Header() {
         <Toolbar sx={{ justifyContent: "space-between", px: { xs: 2, md: 4 } }}>
           {/* Mobile Menu Icon */}
           <IconButton 
-            color="inherit" 
+            color="#a200ff" 
             aria-label="open drawer" 
             edge="start" 
             onClick={handleDrawerToggle}
@@ -291,7 +235,7 @@ function Header() {
                 key={item.text}
                 onClick={() => handleNavClick(item.id)}
                 sx={{ 
-                  color:  "white",
+                  color:  "#a200ff",
                   fontWeight: "500",
                   fontSize: "0.95rem",
                   px: 2,
