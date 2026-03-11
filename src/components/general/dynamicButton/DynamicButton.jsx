@@ -1,21 +1,37 @@
 import styles from './DynamicButton.module.css';
 
-const DynamicButton = ({ 
-  href, 
-  text, 
-  className = '', 
+const DynamicButton = ({
+  href,
+  text,
+  className = '',
   variant = 'primary',
-  active = false, // Add active prop
-  onClick 
+  active = false,
+  onClick,
+  target,
+  rel,
+  download,
 }) => {
+  const buttonClassName = `${styles.button} ${styles[variant]} ${active ? styles.active : ''} ${className}`.trim();
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        className={buttonClassName}
+        onClick={onClick}
+        target={target}
+        rel={rel}
+        download={download}
+      >
+        {text}
+      </a>
+    );
+  }
+
   return (
-    <a
-    href={href} 
-      className={`${styles.button} ${styles[variant]} ${active ? styles.active : ''} ${className}`}
-      onClick={onClick}
-    >
+    <button type="button" className={buttonClassName} onClick={onClick}>
       {text}
-    </a>
+    </button>
   );
 };
 

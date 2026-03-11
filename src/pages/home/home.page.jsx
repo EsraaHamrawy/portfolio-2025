@@ -77,8 +77,8 @@ const Home = () => {
               </div>
             </div>
             <div className={`${style.fadeInUp} ${style.delay800}`} >
-            <DynamicButton  text="Contact"  onClick={scrollToContact} /> 
-            <DynamicButton to={cv} text="resume"  active={true}  />
+            <DynamicButton text="Contact" onClick={scrollToContact} />
+            <DynamicButton href={cv} text="Resume" active={true} target="_blank" rel="noreferrer" />
             </div>
           </Grid>
           {/* Right Side: Image */}
