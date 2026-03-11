@@ -1,4 +1,4 @@
-import React, { useState } from "react"; 
+import React, { useEffect, useState } from "react"; 
 import { AppBar, Box, Toolbar, IconButton, Typography, Drawer, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Tooltip, Button } from "@mui/material"; 
 import { FaBars, FaHome, FaInfoCircle, FaProjectDiagram, FaChartBar, FaAward, FaEnvelope, FaCode, FaTimes, FaSun, FaMoon } from "react-icons/fa"; 
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa"; 
@@ -65,6 +65,35 @@ function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(true);
 
+  const applyTheme = (isDarkMode) => {
+    const allMainElement = document.getElementById("allmain");
+
+    if (allMainElement) {
+      if (isDarkMode) {
+        allMainElement.style.background = "transparent";
+        allMainElement.style.color = "white";
+      } else {
+        allMainElement.style.background = "rgb(231 217 251)";
+        allMainElement.style.color = "#333";
+      }
+    }
+
+    document.body.dataset.theme = isDarkMode ? "dark" : "light";
+    document.body.style.background = isDarkMode ? "#000" : "rgb(231 217 251)";
+    document.body.style.color = isDarkMode ? "white" : "#333";
+    document.body.style.transition = "all 0.3s ease";
+
+    const headerElement = document.querySelector(".MuiAppBar-root");
+    if (headerElement) {
+      headerElement.style.background = "transparent";
+      headerElement.style.color = "white";
+    }
+  };
+
+  useEffect(() => {
+    applyTheme(darkMode);
+  }, [darkMode]);
+
   // Toggle drawer
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -72,35 +101,7 @@ function Header() {
   
   // Toggle dark/light mode
   const toggleDarkMode = () => {
-    const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode);
-    
-    // Apply styles to element with id "allmain"
-    const allMainElement = document.getElementById('allmain');
-    
-    if (allMainElement) {
-      if (newDarkMode) {
-        // Dark mode
-        allMainElement.style.background = "transparent";
-        allMainElement.style.color = "white";
-      } else {
-        // Light mode
-        allMainElement.style.background = "rgb(231 217 251) ";
-        allMainElement.style.color = "#333";
-      }
-    }
-
-    // Apply styles to body for full page background
-    document.body.style.background = newDarkMode ? "#000" : "rgb(231 217 251)";
-    document.body.style.color = newDarkMode ? "white" : "#333";
-    document.body.style.transition = "all 0.3s ease";
-
-    // Keep header styling consistent in both modes
-    const headerElement = document.querySelector('.MuiAppBar-root');
-    if (headerElement) {
-      headerElement.style.background = "transparent";
-      headerElement.style.color = "white";
-    }
+    setDarkMode((prevMode) => !prevMode);
   };
 
   // Scroll to section and close drawer

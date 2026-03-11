@@ -28,6 +28,7 @@ import Redux from "../../assets/icons8-redux-50.png";
 import github from "../../assets/icons8-github-logo-48.png";
 // import material from "../../assets/icons8-material-ui.svg";
 import {textVariant} from "../../utils/motion.js"
+import BackToTopButton from "../../components/general/backToTopButton/BackToTopButton.jsx";
 const Home = () => {
   const scrollToContact = () => {
     const section = document.getElementById('Contact');
@@ -57,6 +58,7 @@ const Home = () => {
              
             </div>
             <div className={`${style.fadeInUp} ${style.delay600}`}>
+               <BackToTopButton />
               <p className={style.smallResume}>
                 I’m a self-taught Front-End Developer with <span className={style.colorText}>3 years of experience</span> specializing in
                 ReactJS and JavaScript. I create responsive, accessible, and user-friendly websites that

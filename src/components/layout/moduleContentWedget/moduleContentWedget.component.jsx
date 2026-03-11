@@ -6,7 +6,7 @@ const ModuleContentWedget = ({ children }) => {
   return (
     
     <div className="container mx-auto">
-   <div className={styles.wedget}>
+   <div className={styles.wedget} id="main-content-wedget">
     
       {children}
      <Footer />

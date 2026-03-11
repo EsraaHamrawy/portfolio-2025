@@ -8,6 +8,7 @@ import SideBar from "../sideBar/sideBar.component";
 import Navbar from "../navbar/navbar.component";
 import ModuleContentWedget from "../moduleContentWedget/moduleContentWedget.component";
 import LiquidEther from "../../../components/general/LiquidEther/LiquidEther.jsx";
+import BackToTopButton from "../../../components/general/backToTopButton/BackToTopButton.jsx";
 import Header from "../../layout/Header.jsx";
 
 const MainLayout = () => {
@@ -116,6 +117,7 @@ const MainLayout = () => {
             <Outlet />
           </ModuleContentWedget>
         </div>
+        <BackToTopButton />
        
       </main>
       

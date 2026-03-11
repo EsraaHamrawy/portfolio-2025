@@ -41,7 +41,6 @@ const images = [
     <section id="skills" className="skills mt-3"  style={{ paddingTop: "3rem" }}>
       {/* Title */}
       {/* <h2 className="text-2xl md:text-4xl font-bold bungee-shade-regular title">Skills</h2> */}
-
       {/* Marquee Section */}
       <div className="container">
         <Marquee speed={30} pauseOnHover={true} gradient={true} gradientWidth={0}>
@@ -54,7 +53,7 @@ const images = [
       </div>
 
       {/* Reverse Marquee for Mobile */}
-      <div className="mt-8 block md:hidden reverse-marquee">
+      {/* <div className="mt-8 block md:hidden reverse-marquee">
         <Marquee
           speed={30}
           pauseOnHover={true}
@@ -68,7 +67,7 @@ const images = [
             </div>
           ))}
         </Marquee>
-      </div>
+      </div> */}
     </section>
   );
 };
