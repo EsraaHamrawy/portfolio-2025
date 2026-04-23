@@ -26,7 +26,6 @@ import React from "../../assets/icons8-react-48.png";
 import bootstrap from "../../assets/icons8-bootstrap-48.png";
 import Redux from "../../assets/icons8-redux-50.png";
 import github from "../../assets/icons8-github-logo-48.png";
-// import material from "../../assets/icons8-material-ui.svg";
 import {textVariant} from "../../utils/motion.js"
 import BackToTopButton from "../../components/general/backToTopButton/BackToTopButton.jsx";
 const Home = () => {
@@ -38,7 +37,6 @@ const Home = () => {
     <>
       <section className={" sm:px-16 px-6 sm:py-16 py-10"} id="home" aria-labelledby="hero-title">
         <Grid container      spacing={2} className={style.heroContaner}>
-          {/* Left Side: Text */}
           <Grid item xs={12} md={6} className={style.heroText}>
             <div className={style.fadeInUp}>
             <img src={Hello} alt="" aria-hidden="true" width="20px" />
@@ -48,7 +46,7 @@ const Home = () => {
               <h1 id="hero-title" className={styles.sectionHeadText}>Esraa Hamrawy</h1>
             </div>
             <div className={`${style.fadeInUp} ${style.delay400}`}>
-              <h2 className="text-xl font-semibold">Frontend Developer</h2>
+              <p className="text-xl font-semibold">Frontend Developer</p>
               
             </div>
             <div className={`${style.fadeInUp} ${style.delay600}`}>
@@ -76,7 +74,6 @@ const Home = () => {
             <DynamicButton href={cv} text="View Resume" active={true} target="_blank" rel="noreferrer" />
             </div>
           </Grid>
-          {/* Right Side: Image */}
           <Grid item xs={12} md={6} className={style.heroImage}>
             <div className={`${style.fadeInRight} ${style.delay900}`}>
             <img src={Illustration} alt="Frontend developer illustration" />
@@ -89,7 +86,6 @@ const Home = () => {
     </section> 
 
      
-      {/* ✅ SKILLS SECTION */}
       <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}` } id="skills" aria-labelledby="skills-heading">
           <p className={`${styles.sectionSubText} text-center`}>Core skills</p>
           <h2 id="skills-heading" className={`${styles.sectionHeadText} text-center`}>Skills</h2>
@@ -97,12 +93,10 @@ const Home = () => {
             <p className={style.smallResume}>
             These are the <span className={style.colorText}>tools I use to turn ideas into</span> polished, responsive interfaces. <span className={style.colorText}>They help me build</span> products that feel clear, fast, and easy to use.
                   </p>
-              {/* <img src={Skils} alt="Skils" /> */}
             </div>
             <Skills />
       </section>
 
-   {/* ✅ Certifications SECTION */}
     <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}` } id="Certifications" aria-labelledby="certifications-heading">
       <p className={`${styles.sectionSubText} text-center`}>Selected</p>
       <h2 id="certifications-heading" className={`${styles.sectionHeadText} text-center`}>Certifications</h2>
@@ -111,7 +105,6 @@ const Home = () => {
       <ChromaGrid />
       </section>
 
-       {/* ✅ PROJECTS SECTION */}
        <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}`} id={"projects"} aria-labelledby="projects-heading">
       
       <div className={`${style.fadeInUp} ${style.delay400}`}>
@@ -136,14 +129,7 @@ const Home = () => {
 
 
 
-     {/* ✅ Contact Me SECTION */}
      <section className="sm:px-16 px-6 sm:py-16 py-10"   id="Contact" aria-labelledby="contact-heading" >
-   
-
-      {/* <div className={`${style.fadeInUp} ${style.delay400}`}>
-        <h2 className={`${style.Textcolor} font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px] flex justify-center  text-cente`}>Contact Me</h2>
-      </div> */}
-    
       <ContactMe />
       </section>
 

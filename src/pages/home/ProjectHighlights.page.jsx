@@ -1,6 +1,4 @@
-
-
-const PageDemoTow = () => {
+const ProjectHighlights = () => {
   return (
     <div
       style={{
@@ -10,9 +8,9 @@ const PageDemoTow = () => {
         alignItems: "center",
       }}
     >
-      Demo Two Content Widget
+      Project Highlights
     </div>
   );
 };
 
-export default PageDemoTow;
+export default ProjectHighlights;

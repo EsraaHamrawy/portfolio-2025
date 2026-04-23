@@ -1,5 +1,4 @@
-
-const PageDemoOne =() => {
+const ProjectShowcase = () => {
   return (
     <div
       style={{
@@ -9,9 +8,9 @@ const PageDemoOne =() => {
         alignItems: "center",
       }}
     >
-      Demo One Content Widget
+      Project Showcase
      </div>
   );
 };
 
-export default PageDemoOne;
+export default ProjectShowcase;

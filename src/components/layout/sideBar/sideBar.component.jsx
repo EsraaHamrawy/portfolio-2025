@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link, NavLink, useLocation } from "react-router-dom";
 import styles from "./sideBar.module.css";
-import AppLogo from "../../general/appLogo/appLogo.component";
 import Socialmedia from "../socialmedia/socialmedia.component.jsx";
 import React from "react";
 import ModuleLogo from "../../general/moduleLogo/moduleLogo.component.jsx";
@@ -108,7 +107,6 @@ const SideBar = ({ moduleTitle, moduleSubTitle, moduleLogo, sidebarData }) => {
         </div>
         <div className={styles.sideBarFooter}>
           <Socialmedia />
-          {/* <AppLogo /> */}
         </div>
       </div>
     </>

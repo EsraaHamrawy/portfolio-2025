@@ -129,24 +129,24 @@ const ContactMe = () => {
     return (
       <>
   
-        <p className={`${styles.sectionSubText} text-center`}>Open to new opportunities</p>
-        <h2 id="contact-heading" className={`${styles.sectionHeadText} text-center`}>Contact</h2>
+      <p className={`${styles.sectionSubText} text-center`}>Open to new opportunities</p>
+      <h2 id="contact-heading" className={`${styles.sectionHeadText} text-center`}>Contact</h2>
       <div className={"flex justify-center sm:py-6 py-5 " }>
       <Socialmedia />
       </div>
          <div className='flex justify-center items-center '>
         <div className='relative mx-4 w-full max-w-md overflow-clip'>
-          <h2 className='text-purple-600 text-accent font-semibold text-center text-2xl sm:px-16 px-6 sm:py-6 py-5 '>
+          <p className='text-purple-600 text-accent font-semibold text-center text-2xl sm:px-16 px-6 sm:py-6 py-5 '>
             OR
-          </h2>
+          </p>
           {/* Separator Lines */}
           <div className={'absolute top-1/2 left-1/2 translate-x-8 translate-y-1/2 w-1/2 h-px bg-transparent'} style={{ boxShadow: "0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 0px 0 rgba(0, 0, 0, .08), 0 1px 0 -3px rgba(0, 0, 0, .05)" }}/>
           <div className='absolute top-1/2 right-1/2 -translate-x-8 translate-y-1/2 w-1/2 h-px bg-transparent' style={{ boxShadow: "0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 0px 0 rgba(0, 0, 0, .08), 0 1px 0 -3px rgba(0, 0, 0, .05) " }}/>
         </div>
       </div>
-          <h2 className='text-accent font-semibold text-left mb-4 text-2xl flex justify-center sm:py-6 py-5'>
+          <h3 className='text-accent font-semibold text-left mb-4 text-2xl flex justify-center sm:py-6 py-5'>
             Send a direct message
-        </h2>
+        </h3>
       
         <div
         className={` flex xl:flex-row justify-center flex-col-reverse gap-10 overflow-hidden`}
