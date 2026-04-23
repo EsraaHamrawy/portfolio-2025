@@ -425,4 +425,19 @@ general Menu style
   flex-direction: column;
   align-items: center;
 
- }
+  }
+
+@media (prefers-reduced-motion: reduce) {
+  .toggle:hover {
+    transform: none;
+  }
+
+  .icon,
+  .icon--moon,
+  .icon--sun,
+  .vertical-timeline::before,
+  .css-h4y409-MuiList-root,
+  .css-1ontqvh {
+    transition: none !important;
+  }
+}

@@ -9,10 +9,10 @@ const experiences = [
     iconBg: "#efe9f1c7",
     date: "May 2025 - Present",
     points: [
-      "Develop and maintain responsive user interfaces for the Odoo ERP platform using modern frontend concepts.",
-      "Build interactive, component-based features using React.js principles within the Odoo framework.",
-      "Customize and extend Odoo's frontend using OWL (Odoo Web Library), Vanilla JavaScript, and Bootstrap.",
-      "Ensure mobile-responsive layouts and cross-browser compatibility across all developed components.",
+      "Own the frontend implementation of Odoo ERP interfaces, translating product requirements into clear, maintainable user experiences.",
+      "Build reusable, component-based features with OWL, Vanilla JavaScript, and Bootstrap to support faster delivery across the platform.",
+      "Collaborate with product and backend teams to align UI behavior with business workflows and integration constraints.",
+      "Deliver responsive, cross-browser interfaces that improve usability for day-to-day ERP operations.",
     ],
   },
   {
@@ -22,12 +22,10 @@ const experiences = [
     iconBg: "#54a1f3",
     date: "Jan 2023 - Apr 2025",
     points: [
-      "Developed and maintained frontend interfaces for internal business systems, including HR and employee management modules.",
-      "Built a smart objective tracking system with a multi-stage approval workflow for Directors and HR.",
-      "Developed UI/UX features for an intranet portal aligned with SharePoint-style capabilities.",
-      "Created a Document Management System interface for organizing, storing, and tracking digital files.",
-      "Implemented frontend logic for a workflow-based Violation Management System.",
-      "Collaborated closely with backend, QA, and business teams throughout the full project lifecycle.",
+      "Owned frontend delivery for internal business systems, including HR, employee management, and workflow-driven modules.",
+      "Built a smart objective tracking flow with multi-stage approvals for Directors and HR, improving visibility into ownership and status.",
+      "Designed and implemented intranet, document management, and violation management interfaces tailored to day-to-day operational needs.",
+      "Partnered with backend, QA, and business stakeholders throughout the lifecycle to refine requirements, validate behavior, and ship stable releases.",
     ],
   },
   {
@@ -37,9 +35,9 @@ const experiences = [
     iconBg: "#54a1f3",
     date: "Jan 2022 - Sep 2022",
     points: [
-      "Supported senior developers in implementing and maintaining frontend features.",
-      "Converted design mockups into responsive user interfaces using HTML, CSS, and JavaScript.",
-      "Gained hands-on experience in debugging, UI improvements, and code refactoring.",
+      "Supported senior developers by implementing frontend features and fixing UI issues across active development work.",
+      "Converted design mockups into responsive interfaces using HTML, CSS, and JavaScript with attention to consistency and usability.",
+      "Contributed to debugging, UI refinements, and code cleanup to improve the quality of delivered screens.",
     ],
   },
   {
@@ -49,8 +47,8 @@ const experiences = [
     iconBg: "#efe9f1c7",
     date: "Nov 2021 - Dec 2021",
      points: [
-    "Developed the frontend of a public-facing e-commerce website.",
-    "Built responsive pages with clean UI and optimized layouts for Arabic language (RTL).",
+    "Built the frontend for a public-facing e-commerce website, focusing on a polished customer experience.",
+    "Delivered responsive Arabic RTL pages with clean layouts to support the brand and local language requirements.",
     {
       isLink: true,
       label: "Website:",

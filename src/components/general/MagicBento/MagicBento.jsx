@@ -13,18 +13,30 @@ const MOBILE_BREAKPOINT = 768;
 const cardData = [
   {
     title: "Aura Store",
-    description: "Personal e-commerce demo",
+    description: "Built a React storefront with cart state, form validation, and reusable product flows.",
+    context: "Self-directed learning project focused on modern React architecture and production-style state handling.",
+    role: "Frontend developer",
+    problem: "Needed a realistic e-commerce experience that could handle catalog browsing, cart updates, and validated checkout behavior in one interface.",
+    solution: "Created a modular storefront with reusable product cards, Context API state, React Hook Form validation, and Zod-backed form rules.",
+    result: "Shipped a deployed demo that demonstrates scalable component structure, complex UI state, and polished storefront interactions.",
+    built: [
+      "Product listing and cart flows",
+      "Validated checkout forms",
+      "Reusable UI and state architecture"
+    ],
+    stack: ["React 18", "TypeScript", "React Hook Form", "Zod", "Context API", "CSS Modules", "Vite", "Mock API"],
     details: {
-      overview: "A comprehensive e-commerce demo project built to master modern React development, implementing full cart functionality, product management, and complex state handling.",
-      achievements: [
-        "Built complete frontend application from scratch for learning purposes",
-        "Implemented complex form validation to understand advanced React patterns",
-        "Practiced code splitting and performance optimization techniques",
-        "Created reusable component architecture following best practices",
-        "Successfully deployed full-stack demo application"
+      context: "Self-directed learning project focused on modern React architecture and production-style state handling.",
+      role: "Frontend developer",
+      problem: "Needed a realistic e-commerce experience that could handle catalog browsing, cart updates, and validated checkout behavior in one interface.",
+      solution: "Created a modular storefront with reusable product cards, Context API state, React Hook Form validation, and Zod-backed form rules.",
+      result: "Shipped a deployed demo that demonstrates scalable component structure, complex UI state, and polished storefront interactions.",
+      built: [
+        "Product listing and cart flows",
+        "Validated checkout forms",
+        "Reusable UI and state architecture"
       ],
-      techStack: ["React 18", "TypeScript", "React Hook Form", "Zod Validation", "Context API", "CSS Modules", "Vite", "Mock API"],
-      roleNotes: "Self-directed learning project to master modern React development. Independently architected and built a full e-commerce demo to understand complex state management, form validation, and performance optimization. This project served as hands-on practice for implementing production-grade patterns including TypeScript strict typing, reusable components, and responsive design principles."
+      techStack: ["React 18", "TypeScript", "React Hook Form", "Zod", "Context API", "CSS Modules", "Vite", "Mock API"]
     },
     label: "Personal project",
     link: "https://e-comarce-front.vercel.app/",
@@ -33,18 +45,30 @@ const cardData = [
   },
   {
     title: "Digital Center",
-    description: "Team full-stack project",
+    description: "Built a Redux-driven team storefront with auth flows, shared state, and responsive product views.",
+    context: "Team project built to practice frontend collaboration, shared planning, and product development workflows.",
+    role: "Frontend contributor",
+    problem: "The team needed a cohesive storefront that could coordinate product browsing, authentication, and shared state across the app.",
+    solution: "Implemented Redux Toolkit state, routed views, responsive layouts, and UI aligned with design and product feedback.",
+    result: "Delivered a collaborative build that shows how I work with design and product partners while shipping maintainable frontend features.",
+    built: [
+      "Redux-powered application state",
+      "Authentication and routed views",
+      "Responsive layouts from design specs"
+    ],
+    stack: ["React", "Redux Toolkit", "React Router DOM", "MUI", "Team Project Management"],
     details: {
-      overview: "Comprehensive e-commerce platform developed to practice full-stack concepts including React with Redux, team collaboration, and product development processes.",
-      achievements: [
-        "Mastered Redux for complex application state management",
-        "Collaborated effectively with design and product teams",
-        "Implemented user authentication and authorization flows",
-        "Built responsive layouts from design specifications",
-        "Practiced agile development methodologies in team setting"
+      context: "Team project built to practice frontend collaboration, shared planning, and product development workflows.",
+      role: "Frontend contributor",
+      problem: "The team needed a cohesive storefront that could coordinate product browsing, authentication, and shared state across the app.",
+      solution: "Implemented Redux Toolkit state, routed views, responsive layouts, and UI aligned with design and product feedback.",
+      result: "Delivered a collaborative build that shows how I work with design and product partners while shipping maintainable frontend features.",
+      built: [
+        "Redux-powered application state",
+        "Authentication and routed views",
+        "Responsive layouts from design specs"
       ],
-      techStack: ["React", "Redux Toolkit", "React Router DOM", "MUI",  "Team Project Management"],
-      roleNotes: "Ambitious learning project focused on both technical implementation and team collaboration skills. Developed features using React with Redux state management while actively participating in design reviews and requirement discussions. This experience provided practical understanding of how frontend development integrates with design and product teams, emphasizing the importance of communication and shared understanding in successful project delivery."
+      techStack: ["React", "Redux Toolkit", "React Router DOM", "MUI", "Team Project Management"]
     },
     label: "Team project",
     link: "https://esraahamrawy.github.io/degetai-center/#/",
@@ -53,18 +77,30 @@ const cardData = [
   },
   {
     title: "Bloom",
-    description: "Client website",
+    description: "Delivered a brand-forward client website with reusable sections, responsive layouts, and performance-focused asset handling.",
+    context: "Freelance client engagement where I owned the full frontend build and translated brand direction into a polished site.",
+    role: "Sole frontend developer",
+    problem: "The client needed a professional website that felt on-brand, worked smoothly across devices, and was easy to extend.",
+    solution: "Built the complete UI with reusable sections, responsive grids, custom CSS, and optimized assets for fast delivery.",
+    result: "Launched a polished corporate site that improved the brand presentation and gave the client a maintainable frontend foundation.",
+    built: [
+      "End-to-end frontend ownership",
+      "Reusable content sections",
+      "Responsive layouts and asset optimization"
+    ],
+    stack: ["JavaScript", "Bootstrap", "Custom CSS", "Responsive Layouts", "Cross-browser Testing", "Performance Optimization"],
     details: {
-      overview: "Designed and developed the complete frontend for Bloom's corporate website, focusing on clean aesthetics, user experience, and brand representation.",
-      achievements: [
-        "Architected and built 100% of frontend UI components",
-        "Implemented responsive grid system across 20+ pages",
-        "Optimized images and assets reducing load time by 60%",
-        "Created reusable CSS utility classes and components",
-        "Ensured WCAG accessibility standards compliance"
+      context: "Freelance client engagement where I owned the full frontend build and translated brand direction into a polished site.",
+      role: "Sole frontend developer",
+      problem: "The client needed a professional website that felt on-brand, worked smoothly across devices, and was easy to extend.",
+      solution: "Built the complete UI with reusable sections, responsive grids, custom CSS, and optimized assets for fast delivery.",
+      result: "Launched a polished corporate site that improved the brand presentation and gave the client a maintainable frontend foundation.",
+      built: [
+        "End-to-end frontend ownership",
+        "Reusable content sections",
+        "Responsive layouts and asset optimization"
       ],
-      techStack: ["JavaScript", "Bootstrap Framework", "Custom CSS", "Responsive Layouts", "Cross-browser Testing", "Performance Optimization"],
-      roleNotes: "Led complete UI development for my first professional freelance engagement. Translated client requirements into a visually appealing and functional website, building all interface elements from navigation to footer. Managed project timeline and client communications independently, delivering a polished product that exceeded expectations and paved the way for future freelance opportunities."
+      techStack: ["JavaScript", "Bootstrap", "Custom CSS", "Responsive Layouts", "Cross-browser Testing", "Performance Optimization"]
     },
     label: "Client work",
     link: "https://www.bloom.com.jo/",
@@ -73,18 +109,30 @@ const cardData = [
   },
   {
     title: "COP 27 Conference",
-    description: "Responsive event landing page",
+    description: "Converted XD designs into a responsive event landing page and integrated live social content.",
+    context: "First professional assignment, turning a conference concept into a production-ready marketing page.",
+    role: "Frontend developer",
+    problem: "The task was to translate static design files into a polished landing page while keeping the content responsive and current.",
+    solution: "Built the page in Bootstrap, matched the XD layout precisely, and integrated a live Twitter feed for dynamic updates.",
+    result: "Delivered the assignment on spec and demonstrated that I could work from design files and meet professional frontend expectations.",
+    built: [
+      "Design-to-code landing page",
+      "Responsive Bootstrap layout",
+      "Live social feed integration"
+    ],
+    stack: ["JavaScript", "Bootstrap", "REST APIs", "Responsive Design", "Design-to-Code", "Git Workflow"],
     details: {
-      overview: "A demonstration homepage for the COP 27 climate conference, showcasing my ability to translate complex designs into responsive code and integrate external APIs for dynamic content.",
-      achievements: [
-        "Converted XD design files to production-quality code",
-        "Implemented fully responsive layout using Bootstrap",
-        "Integrated live Twitter feed via official API",
-        "Created interactive elements without JavaScript frameworks",
-        "Delivered as first professional development assignment"
+      context: "First professional assignment, turning a conference concept into a production-ready marketing page.",
+      role: "Frontend developer",
+      problem: "The task was to translate static design files into a polished landing page while keeping the content responsive and current.",
+      solution: "Built the page in Bootstrap, matched the XD layout precisely, and integrated a live Twitter feed for dynamic updates.",
+      result: "Delivered the assignment on spec and demonstrated that I could work from design files and meet professional frontend expectations.",
+      built: [
+        "Design-to-code landing page",
+        "Responsive Bootstrap layout",
+        "Live social feed integration"
       ],
-      techStack: ["JavaScript", "Bootstrap", "REST APIs", "Responsive Design", "Design-to-Code", "Git Workflow"],
-      roleNotes: "Successfully completed my first professional development task: Creating a responsive conference homepage from XD designs. This project proved my capability to work with design teams and implement precise UI specifications. The X API integration demonstrated my understanding of asynchronous data fetching and DOM manipulation. As my introduction to company development workflows, this project established my foundation in professional frontend practices."
+      techStack: ["JavaScript", "Bootstrap", "REST APIs", "Responsive Design", "Design-to-Code", "Git Workflow"]
     },
     label: "Professional demo",
     link: "https://cop-27.vercel.app/",
@@ -93,18 +141,30 @@ const cardData = [
   },
   {
     title: "Secure Login System",
-    description: "Login and authentication UI",
+    description: "Created a secure, accessible login experience with validation, feedback, and password controls.",
+    context: "UI-focused authentication exercise to practice security, accessibility, and form-state management.",
+    role: "Frontend developer",
+    problem: "The interface needed to feel trustworthy, guide users through validation errors, and remain usable with assistive technology.",
+    solution: "Built real-time validation, password visibility controls, accessible labels, and keyboard-friendly interactions.",
+    result: "Produced a reusable auth UI that improves clarity for users and shows careful attention to form usability.",
+    built: [
+      "Validation with live feedback",
+      "Accessible auth interactions",
+      "Password visibility and remember-me flows"
+    ],
+    stack: ["HTML5", "CSS3", "JavaScript", "Form Validation", "Local Storage", "Responsive Design", "Accessibility"],
     details: {
-      overview: "A comprehensive login and authentication system implementing modern security practices, form validation, and user experience best practices.",
-      achievements: [
-        "Built secure login form with client-side validation",
-        "Implemented password visibility toggle for UX enhancement",
-        "Added form validation with real-time error feedback",
-        "Created responsive design for all device sizes",
-        "Implemented accessibility features (ARIA labels, keyboard navigation)"
+      context: "UI-focused authentication exercise to practice security, accessibility, and form-state management.",
+      role: "Frontend developer",
+      problem: "The interface needed to feel trustworthy, guide users through validation errors, and remain usable with assistive technology.",
+      solution: "Built real-time validation, password visibility controls, accessible labels, and keyboard-friendly interactions.",
+      result: "Produced a reusable auth UI that improves clarity for users and shows careful attention to form usability.",
+      built: [
+        "Validation with live feedback",
+        "Accessible auth interactions",
+        "Password visibility and remember-me flows"
       ],
-      techStack: ["HTML5", "CSS3", "JavaScript", "Form Validation", "Local Storage", "Responsive Design", "Accessibility"],
-      roleNotes: "Developed a complete authentication interface focusing on security, usability, and responsive design. Implemented real-time form validation with visual feedback, password strength indicators, and remember-me functionality using localStorage. This project demonstrates attention to detail in user experience and commitment to building accessible, secure web interfaces."
+      techStack: ["HTML5", "CSS3", "JavaScript", "Form Validation", "Local Storage", "Responsive Design", "Accessibility"]
     },
     label: "Authentication UI",
     link: "/LoginSystem/index.html",
@@ -113,18 +173,30 @@ const cardData = [
   },
   {
     title: "Bookmark Manager",
-    description: "Bookmark management app",
+    description: "Built a productivity app for saving, organizing, and searching bookmarks with local persistence.",
+    context: "Personal productivity app focused on CRUD patterns, persistence, and fast retrieval.",
+    role: "Frontend developer",
+    problem: "Users needed a simple way to keep bookmarks organized without depending on a backend.",
+    solution: "Implemented add, edit, delete, search, and filter workflows backed by localStorage for persistence.",
+    result: "Delivered a lightweight organizer that demonstrates practical data handling and a clear content-management workflow.",
+    built: [
+      "CRUD bookmark management",
+      "Local storage persistence",
+      "Search and filter tools"
+    ],
+    stack: ["JavaScript", "Local Storage API", "CSS Grid", "DOM Manipulation", "CRUD Operations", "Event Handling"],
     details: {
-      overview: "A web-based bookmark management application allowing users to save, organize, and categorize their favorite websites with search functionality.",
-      achievements: [
-        "Built CRUD operations for bookmark management",
-        "Implemented local storage for data persistence",
-        "Created responsive grid layout for bookmark display",
-        "Added search and filter functionality",
-        "Developed clean, intuitive user interface"
+      context: "Personal productivity app focused on CRUD patterns, persistence, and fast retrieval.",
+      role: "Frontend developer",
+      problem: "Users needed a simple way to keep bookmarks organized without depending on a backend.",
+      solution: "Implemented add, edit, delete, search, and filter workflows backed by localStorage for persistence.",
+      result: "Delivered a lightweight organizer that demonstrates practical data handling and a clear content-management workflow.",
+      built: [
+        "CRUD bookmark management",
+        "Local storage persistence",
+        "Search and filter tools"
       ],
-      techStack: ["JavaScript", "Local Storage API", "CSS Grid", "DOM Manipulation", "CRUD Operations", "Event Handling"],
-      roleNotes: "Designed and developed a practical bookmark management application to practice data persistence and CRUD operations. Implemented features for adding, editing, deleting, and categorizing bookmarks with local storage for data persistence. Focused on creating an intuitive user experience with efficient search and organization capabilities."
+      techStack: ["JavaScript", "Local Storage API", "CSS Grid", "DOM Manipulation", "CRUD Operations", "Event Handling"]
     },
     label: "Productivity app",
     link: "https://bookmark-jj5o2uztr-esraahamrawys-projects.vercel.app/",
@@ -461,40 +533,65 @@ const ProjectDetails = ({ details, className = '' }) => {
 
   return (
     <div className={`project-details ${className}`.trim()}>
-      {details.overview && (
-        <>
-          <h4>Overview</h4>
-          <p>{details.overview}</p>
-        </>
+      {details.context && (
+        <div className="project-details__section">
+          <h4>Context</h4>
+          <p>{details.context}</p>
+        </div>
       )}
-      
-      {details.achievements && details.achievements.length > 0 && (
-        <>
-          <h4>Key Achievements</h4>
+
+      {(details.role || details.techStack?.length > 0) && (
+        <div className="project-details__meta-row">
+          {details.role && (
+            <div className="project-details__meta-item">
+              <h4>Role</h4>
+              <p>{details.role}</p>
+            </div>
+          )}
+
+          {details.techStack && details.techStack.length > 0 && (
+            <div className="project-details__meta-item">
+              <h4>Stack</h4>
+              <div className="tech-stack">
+                {details.techStack.map((tech, i) => (
+                  <span key={i}>{tech}</span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {details.problem && (
+        <div className="project-details__section">
+          <h4>Problem</h4>
+          <p>{details.problem}</p>
+        </div>
+      )}
+
+      {details.solution && (
+        <div className="project-details__section">
+          <h4>Solution</h4>
+          <p>{details.solution}</p>
+        </div>
+      )}
+
+      {details.built && details.built.length > 0 && (
+        <div className="project-details__section">
+          <h4>What I Built</h4>
           <ul>
-            {details.achievements.map((item, i) => (
+            {details.built.map((item, i) => (
               <li key={i}>{item}</li>
             ))}
           </ul>
-        </>
+        </div>
       )}
-      
-      {details.techStack && details.techStack.length > 0 && (
-        <>
-          <h4>Tech Stack</h4>
-          <div className="tech-stack">
-            {details.techStack.map((tech, i) => (
-              <span key={i}>{tech}</span>
-            ))}
-          </div>
-        </>
-      )}
-      
-      {details.roleNotes && (
-        <>
-          <h4>Role Notes</h4>
-          <p>{details.roleNotes}</p>
-        </>
+
+      {details.result && (
+        <div className="project-details__section">
+          <h4>Result</h4>
+          <p>{details.result}</p>
+        </div>
       )}
     </div>
   );
@@ -569,11 +666,13 @@ const MagicBento = ({
           glowColor={glowColor}
           clickEffect={clickEffect}
         >
-          <div className="magic-bento-card__content">
-            <h3 className="magic-bento-card__title">{card.title}</h3>
-            
-            <div className="magic-bento-card__image-container">
-              <img 
+            <div className="magic-bento-card__content">
+              <h3 className="magic-bento-card__title">{card.title}</h3>
+              <p className="magic-bento-card__meta">{card.role} · {card.label}</p>
+              <p className="magic-bento-card__meta magic-bento-card__meta--stack">{card.stack?.slice(0, 3).join(" · ")}</p>
+              
+              <div className="magic-bento-card__image-container">
+                <img 
                 className="magic-bento-card__image" 
                 src={card.img} 
                 alt={card.title || "Project image"} 
@@ -586,7 +685,7 @@ const MagicBento = ({
                   type="button"
                   className="magic-bento-card__button" 
                   onClick={() => handleToggleDetails(index)}
-                  aria-label={activeDetailsIndex === index ? "Close project details" : "Open project details"}
+                  aria-label={activeDetailsIndex === index ? "Close case study details" : "Open case study details"}
                   aria-expanded={activeDetailsIndex === index}
                   aria-haspopup="dialog"
                 >
@@ -630,6 +729,7 @@ const MagicBento = ({
         </div>
         <div className="magic-bento-card__content">
           <h3 className="magic-bento-card__title">{card.title}</h3>
+          <p className="magic-bento-card__meta">{card.role} · {card.label}</p>
           <p className="magic-bento-card__description">{card.description}</p>
         </div>
       </div>
@@ -651,7 +751,7 @@ const MagicBento = ({
       <GlobalModal
         open={activeDetailsIndex !== null}
         onClose={() => setActiveDetailsIndex(null)}
-        title={activeCard?.title || "Project Details"}
+        title={activeCard?.title || "Case Study Details"}
       >
         {activeCard && (
           <div className="space-y-4">
@@ -670,7 +770,7 @@ const MagicBento = ({
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-wide transition hover:bg-white/10"
                   >
-                    View Project
+                    View Case Study
                   </a>
                 )}
               </div>

@@ -38,7 +38,7 @@ const images = [
 
 
   return (
-    <div className="skills mt-3" style={{ paddingTop: "3rem" }}>
+    <div className="skills mt-3">
       {/* Title */}
       {/* <h2 className="text-2xl md:text-4xl font-bold bungee-shade-regular title">Skills</h2> */}
       {/* Marquee Section */}

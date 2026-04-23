@@ -7,11 +7,15 @@
   align-items: center;
 
  }
+  .heroSection {
+    overflow-x: hidden;
+  }
   .heroContaner{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between !important;
+    justify-content: space-between;
+    gap: clamp(1.5rem, 4vw, 4rem);
   
   }
 
@@ -24,6 +28,9 @@
   .currentWork{
     color: var(--color-primary);
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .4rem;
   }
   .heroText h1 {
     font-size: 3rem;
@@ -34,20 +41,21 @@
     margin: .7rem 0;
   }
   .MyWorklogo{
-    width: 6rem;
+    width: clamp(4.5rem, 18vw, 6rem);
     /* height: 3rem; */
   }
   .smallResume {
     margin-bottom: 1rem !important;
+    max-width: 42rem;
+    line-height: 1.8;
   }
   
   .socialMedia {
     display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    /* padding-top: 2rem; */
-    /* padding-left: 1rem; */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: .75rem;
     padding-bottom: 1rem;
   }
   
@@ -55,6 +63,12 @@
   .socialMedia span {
     font-size: 3rem;
     width: 3.5rem;
+  }
+
+  .heroActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
   }
   
   .button {
@@ -98,7 +112,7 @@
   }
   .heroImage img {
     width: 100%;
-    max-width: 70%;       /* Prevent over-expanding */
+    max-width: min(100%, 34rem);
     display: block;
     margin-left: auto;
   }
@@ -131,7 +145,11 @@
   .delay800 {
     animation-delay: 0.8s;
   }
-  
+
+  .delay900 {
+    animation-delay: 0.9s;
+  }
+
   .delay1000 {
     animation-delay: 1s;
   }
@@ -152,31 +170,155 @@
       transform: translateX(0);
     }
   }
+
+  @media (max-width: 768px) {
+    .fadeInUp {
+      transform: translateY(14px);
+      animation-duration: 0.55s;
+    }
+
+    .fadeInRight {
+      transform: translateX(14px);
+      animation-duration: 0.55s;
+    }
+
+    .delay200 {
+      animation-delay: 0.08s;
+    }
+
+    .delay400 {
+      animation-delay: 0.16s;
+    }
+
+    .delay600 {
+      animation-delay: 0.24s;
+    }
+
+    .delay800 {
+      animation-delay: 0.32s;
+    }
+
+    .delay900 {
+      animation-delay: 0.36s;
+    }
+
+    .delay1000 {
+      animation-delay: 0.4s;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fadeInUp,
+    .fadeInRight {
+      animation: none;
+      opacity: 1;
+      transform: none;
+    }
+
+    .delay200,
+    .delay400,
+    .delay600,
+    .delay800,
+    .delay900,
+    .delay1000 {
+      animation-delay: 0s;
+    }
+
+    .skillCard,
+    .button,
+    .heroImage img {
+      transition: none;
+    }
+  }
   
   @media (max-width: 960px) {
-    .container {
-      display: block;
-      margin-top: 15%;
+    .heroContaner {
+      flex-direction: column;
+      align-items: center;
     }
-  
+
+    .heroText {
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
     .heroText h1 {
-      font-size: 5rem;
+      font-size: clamp(2.5rem, 8vw, 4.25rem);
+      line-height: 1.05;
+    }
+
+    .heroActions {
+      justify-content: center;
+    }
+
+    .socialMedia {
+      justify-content: center;
     }
   
     .heroImage {
-      display: none;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .heroImage div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .heroImage img {
+      max-width: min(100%, 26rem);
+      margin: 0 auto;
     }
   }
-  
   @media (max-width: 600px) {
-    .container {
-      margin-top: 35%;
+    .heroText h1 {
+      font-size: clamp(2.1rem, 11vw, 3rem);
+    }
+
+    .heroText p,
+    .smallResume {
+      font-size: 0.98rem;
+    }
+
+    .heroActions {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: .75rem;
+    }
+
+    .heroActions > * {
+      width: 100%;
+      margin-right: 0 !important;
+    }
+
+    .socialMedia img,
+    .socialMedia span {
+      width: 3rem;
+      font-size: 2.4rem;
+    }
+
+    .heroImage img {
+      max-width: 100%;
     }
   }
-  
   @media (max-width: 480px) {
-    .container {
-      margin-top: 45%;
+    .heroSection {
+      padding-inline: 1rem;
+    }
+
+    .heroText {
+      gap: .25rem;
+    }
+
+    .smallResume {
+      line-height: 1.7;
     }
   }
   /* {✅ SKILLS SECTION} */
@@ -227,4 +369,3 @@
       font-size: 0.9rem;
     }
   }
-  
