@@ -70,6 +70,115 @@
     flex-wrap: wrap;
     gap: .75rem;
   }
+
+  .hiringLinksSection {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .hiringLinksCopy {
+    max-width: 54rem;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  .linkPillRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .75rem;
+    margin-top: .5rem;
+  }
+
+  .signalSectionTitle {
+    width: 100%;
+    margin: 1.25rem 0 .25rem;
+    text-align: left;
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+
+  .signalGrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: .5rem;
+  }
+
+  .signalCard {
+    display: flex;
+    flex-direction: column;
+    gap: .85rem;
+    min-height: 100%;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    background: rgba(132, 60, 188, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 3px rgba(255, 255, 255, 0.1), 0 0 3px rgba(138, 43, 226, 0.22);
+    backdrop-filter: blur(12px);
+  }
+
+  .signalBadge {
+    width: fit-content;
+    padding: .35rem .7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: .78rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .signalCardTitle {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .signalCardText {
+    margin: 0;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .signalPills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+  }
+
+  .signalPill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .35rem .7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: rgba(255, 255, 255, 0.82);
+    font-size: .78rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .signalPill:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .signalActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: .15rem;
+  }
   
   .button {
     margin-top: 5rem;
@@ -293,7 +402,21 @@
       gap: .75rem;
     }
 
+    .linkPillRow,
+    .signalActions {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
     .heroActions > * {
+      width: 100%;
+      margin-right: 0 !important;
+    }
+
+    .linkPillRow > *,
+    .signalActions > * {
       width: 100%;
       margin-right: 0 !important;
     }

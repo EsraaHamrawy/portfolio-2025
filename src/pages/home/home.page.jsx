@@ -1,5 +1,6 @@
 import { Grid } from "@mui/material";
 import { Suspense, lazy } from "react";
+import { Link } from "react-router-dom";
 import cv  from "../../assets/Esraa Alhamrawy Frontend Developer.pdf"
 import { useMotionSafety } from "../../utils/motion.js";
 import style from "./Hero.module.css";
@@ -70,6 +71,30 @@ const Home = () => {
             </div>
           </Grid>
         </Grid>
+      </section>
+      <section className={`${style.container} ${style.hiringLinksSection} ${style.fadeInUp} ${style.delay1000}`} id="hiring-links" aria-labelledby="hiring-links-heading">
+        <p className={`${styles.sectionSubText} text-center`}>Recruiter quick links</p>
+        <h2 id="hiring-links-heading" className={`${styles.sectionHeadText} text-center`}>Open the work</h2>
+        <p className={style.hiringLinksCopy}>
+          Fast paths to the live projects, process notes, and profiles hiring teams usually ask for first.
+        </p>
+        <div className={style.linkPillRow}>
+          <Link to="/showcase" className={style.signalPill}>
+            View live projects
+          </Link>
+          <Link to="/highlights" className={style.signalPill}>
+            How I work
+          </Link>
+          <a href={cv} target="_blank" rel="noreferrer" className={style.signalPill}>
+            Resume
+          </a>
+          <a href="https://www.linkedin.com/in/esraa-hamrawy" target="_blank" rel="noopener noreferrer" className={style.signalPill}>
+            LinkedIn
+          </a>
+          <a href="https://github.com/EsraaHamrawy" target="_blank" rel="noopener noreferrer" className={style.signalPill}>
+            GitHub
+          </a>
+        </div>
       </section>
       <section id="experiences">
         <DeferredMount>
