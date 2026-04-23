@@ -111,8 +111,8 @@ const ContactMe = () => {
     return (
       <>
   
-        <p className={`$styles.sectionSubText} text-center`}>Get in touch</p>
-        <h3 className={`${styles.sectionHeadText} text-center`}>Contact.</h3>
+        <p className={`${styles.sectionSubText} text-center`}>Open to new opportunities</p>
+        <h3 className={`${styles.sectionHeadText} text-center`}>Contact</h3>
       <div className={"flex justify-center sm:py-6 py-5 " }>
       <Socialmedia />
       </div>
@@ -126,8 +126,8 @@ const ContactMe = () => {
           <div className='absolute top-1/2 right-1/2 -translate-x-8 translate-y-1/2 w-1/2 h-px bg-transparent' style={{ boxShadow: "0 0 0 1px rgba(255, 255, 255, 0.15), inset 0 0px 0 rgba(0, 0, 0, .08), 0 1px 0 -3px rgba(0, 0, 0, .05) " }}/>
         </div>
       </div>
-      <h2 className='text-accent font-semibold text-left mb-4 text-2xl flex justify-center sm:py-6 py-5'>
-          Send me a message directly
+          <h2 className='text-accent font-semibold text-left mb-4 text-2xl flex justify-center sm:py-6 py-5'>
+            Send a direct message
         </h2>
       
         <div
@@ -147,35 +147,35 @@ const ContactMe = () => {
             className='mt-2  flex-col gap-8 '
           >
             <label className='flex flex-col'>
-              <span className='text-white font-medium mb-4'>Your Name</span>
+              <span className='text-white font-medium mb-4'>Name</span>
               <input
                 type='text'
                 name='name'
                 value={form.name}
                 onChange={handleChange}
-                placeholder="What's your good name?"
+                placeholder="Your name"
                 className='bg-[rgba(132,60,188,0.15)] mb-4 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
             <label className='flex flex-col'>
-              <span className='text-white font-medium mb-4'>Your email</span>
+              <span className='text-white font-medium mb-4'>Email</span>
               <input
                 type='email'
                 name='email'
                 value={form.email}
                 onChange={handleChange}
-                placeholder="What's your web address?"
+                placeholder="your.email@example.com"
                 className='bg-[rgba(132,60,188,0.15)] mb-4 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
             <label className='flex flex-col'>
-              <span className='text-white font-medium mb-4'>Your Message</span>
+              <span className='text-white font-medium mb-4'>Message</span>
               <textarea
                 rows={5}
                 name='message'
                 value={form.message}
                 onChange={handleChange}
-                placeholder='What you want to say?'
+                placeholder='Tell me about your role, team, or project'
                 className='bg-[rgba(132,60,188,0.15)] mb-4 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
@@ -195,7 +195,7 @@ const ContactMe = () => {
                       hover:bg-transparent
                   '
             >
-              {loading ? "Sending..." : "Send" }
+              {loading ? "Sending..." : "Send message" }
             </button>
           </form>
  

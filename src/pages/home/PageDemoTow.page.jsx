@@ -10,7 +10,7 @@ const PageDemoTow = () => {
         alignItems: "center",
       }}
     >
-     Demo 2 Content Wedget
+      Demo Two Content Widget
     </div>
   );
 };

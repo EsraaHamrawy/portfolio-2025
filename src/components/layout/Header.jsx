@@ -9,7 +9,7 @@ import Footer from "./footer/footer";
 const navItems = [
   { text: "About", icon: <FaInfoCircle />, id: "home" },
   { text: "Skills", icon: <FaCode />, id: "skills" },
-  { text: "Experiences", icon: <FaChartBar />, id: "experiences" },
+  { text: "Experience", icon: <FaChartBar />, id: "experiences" },
   { text: "Certifications", icon: <FaChartBar />, id: "Certifications" },
   { text: "Projects", icon: <FaProjectDiagram />, id: "projects" },
   { text: "Contact", icon: <FaEnvelope />, id: "Contact" },

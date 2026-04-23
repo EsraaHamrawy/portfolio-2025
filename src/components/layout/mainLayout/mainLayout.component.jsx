@@ -19,39 +19,39 @@ const MainLayout = () => {
     {
     
       
-        text: "home",
+        text: "Home",
         to: "/home",
         icon: <HomeIcon />,
-        pageTitle: "home Title",
+        pageTitle: "Home",
     
     
     },
     {
-      text: "Demo 1",
+      text: "Demo One",
       to: "/PageDemoOne",
       icon: <FiberManualRecordIcon />,
-      pageTitle: "Demo 1 Title",
+      pageTitle: "Demo One",
     },
     {
-      text: "Demo 2",
+      text: "Demo Two",
       to: "/PageDemoTow",
       icon: <FiberManualRecordIcon />,
-      pageTitle: "Demo 2 Title",
+      pageTitle: "Demo Two",
     },
     {
       parentText: "Page Demo",
       childLinks: [
         {
-          text: "Demo 1",
+          text: "Demo One",
           to: "/PageDemoOne",
           icon: <FiberManualRecordIcon />,
-          pageTitle: "Demo 1 Title",
+          pageTitle: "Demo One",
         },
         {
-          text: "Demo 2",
+          text: "Demo Two",
           to: "/PageDemoTow",
           icon: <FiberManualRecordIcon />,
-          pageTitle: "Demo 2 Title",
+          pageTitle: "Demo Two",
         },
       ],
     },
@@ -81,7 +81,7 @@ const MainLayout = () => {
       {/* <aside className={`${styles.aside}`}>
         <SideBar
           moduleTitle="Esraa Al-Hamrawy"
-          moduleSubTitle="FrontEnd Devloper"
+          moduleSubTitle="Frontend Developer"
           moduleLogo="/images/purchaseModuleLogo.svg"
           sidebarData={sidebarData}
         />

@@ -45,9 +45,7 @@ const Home = () => {
           <Grid item xs={12} md={6} className={style.heroText}>
             <div className={style.fadeInUp}>
             <img src={Hello} alt="Hello" width="20px" />
-              <p>
-             Hello  , I'm
-              </p>
+              <p>Hello, I'm</p>
             </div>
             <div className={`${style.fadeInUp} ${style.delay200}`}>
               <h3 className={styles.sectionHeadText}>Esraa Hamrawy</h3>
@@ -60,12 +58,11 @@ const Home = () => {
             <div className={`${style.fadeInUp} ${style.delay600}`}>
                <BackToTopButton />
               <p className={style.smallResume}>
-                I’m a self-taught Front-End Developer with <span className={style.colorText}>3 years of experience</span> specializing in
-                ReactJS and JavaScript. I create responsive, accessible, and user-friendly websites that
-                combine functionality with clean design. I enjoy learning new technologies and work well in
-                team environments, contributing ideas and collaborating to deliver great results.
+                I’m a frontend developer with <span className={style.colorText}>3 years of experience</span> building
+                responsive, accessible interfaces with React and JavaScript. I value clean design, practical
+                solutions, and strong collaboration across teams.
                 <span className={style.currentWork}>
-                Currently, I'm a Frontend Developer at{" "}
+                Currently, I’m a frontend developer at{" "}
                 <a href="https://www.plennix.com/">
                   <img src={MyWork} className={style.MyWorklogo} alt="MyWork" />
                 </a>
@@ -79,8 +76,8 @@ const Home = () => {
               </div>
             </div>
             <div className={`${style.fadeInUp} ${style.delay800}`} >
-            <DynamicButton text="Contact" onClick={scrollToContact} />
-            <DynamicButton href={cv} text="Resume" active={true} target="_blank" rel="noreferrer" />
+            <DynamicButton text="Contact Me" onClick={scrollToContact} />
+            <DynamicButton href={cv} text="View Resume" active={true} target="_blank" rel="noreferrer" />
             </div>
           </Grid>
           {/* Right Side: Image */}
@@ -99,11 +96,11 @@ const Home = () => {
      
       {/* ✅ SKILLS SECTION */}
       <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}` } id="skills" >
-          <p className={`${styles.sectionSubText} text-center`}>Technical</p>
-          <h3 className={`${styles.sectionHeadText} text-center`}>SKILLS.</h3>
+          <p className={`${styles.sectionSubText} text-center`}>Core skills</p>
+          <h3 className={`${styles.sectionHeadText} text-center`}>Skills</h3>
             <div className={`${style.skilscontainer} ${style.delay1000}`}>
             <p className={style.smallResume}>
-            These are the <span className={style.colorText}>tools I use every day to turn ideas into</span> smooth, accessible, and visually clean interfaces. <span className={style.colorText}>They help me build</span> responsive, interactive experiences that feel simple, fast, and enjoyable to use.           
+            These are the <span className={style.colorText}>tools I use to turn ideas into</span> polished, responsive interfaces. <span className={style.colorText}>They help me build</span> products that feel clear, fast, and easy to use.
                   </p>
               {/* <img src={Skils} alt="Skils" /> */}
             </div>
@@ -112,8 +109,8 @@ const Home = () => {
 
    {/* ✅ Certifications SECTION */}
    <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}` } id="Certifications" >
-      <p className={`${styles.sectionSubText} text-center`}>My </p>
-      <h3 className={`${styles.sectionHeadText} text-center`}>Certifications.</h3>
+      <p className={`${styles.sectionSubText} text-center`}>Selected</p>
+      <h3 className={`${styles.sectionHeadText} text-center`}>Certifications</h3>
         <div className={`${style.skilscontainer} ${style.delay1000}`}>
         </div>
       <ChromaGrid />
@@ -123,8 +120,8 @@ const Home = () => {
        <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}`} id={"projects"}>
      
       <div className={`${style.fadeInUp} ${style.delay400}`}>
-      <p className={`${styles.sectionSubText}  text-center`}>My work</p>
-      <h2 className={`${styles.sectionHeadText}  text-center`}>Projects.</h2>
+      <p className={`${styles.sectionSubText}  text-center`}>Selected work</p>
+      <h2 className={`${styles.sectionHeadText}  text-center`}>Projects</h2>
       </div>
       <MagicBento 
         textAutoHide={true}

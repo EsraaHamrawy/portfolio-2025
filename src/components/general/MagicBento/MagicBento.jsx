@@ -13,7 +13,7 @@ const MOBILE_BREAKPOINT = 768;
 const cardData = [
   {
     title: "Aura Store",
-    description: "Learning e-commerce demo",
+    description: "Personal e-commerce demo",
     details: {
       overview: "A comprehensive e-commerce demo project built to master modern React development, implementing full cart functionality, product management, and complex state handling.",
       achievements: [
@@ -26,14 +26,14 @@ const cardData = [
       techStack: ["React 18", "TypeScript", "React Hook Form", "Zod Validation", "Context API", "CSS Modules", "Vite", "Mock API"],
       roleNotes: "Self-directed learning project to master modern React development. Independently architected and built a full e-commerce demo to understand complex state management, form validation, and performance optimization. This project served as hands-on practice for implementing production-grade patterns including TypeScript strict typing, reusable components, and responsive design principles."
     },
-    label: "Learning Project",
+    label: "Personal project",
     link: "https://e-comarce-front.vercel.app/",
     img: "aura.png",
     color: 'rgba(132, 60, 188,0.15)'
   },
   {
-    title: "Degetal Center",
-    description: "Full-stack learning initiative",
+    title: "Digital Center",
+    description: "Team full-stack project",
     details: {
       overview: "Comprehensive e-commerce platform developed to practice full-stack concepts including React with Redux, team collaboration, and product development processes.",
       achievements: [
@@ -46,14 +46,14 @@ const cardData = [
       techStack: ["React", "Redux Toolkit", "React Router DOM", "MUI",  "Team Project Management"],
       roleNotes: "Ambitious learning project focused on both technical implementation and team collaboration skills. Developed features using React with Redux state management while actively participating in design reviews and requirement discussions. This experience provided practical understanding of how frontend development integrates with design and product teams, emphasizing the importance of communication and shared understanding in successful project delivery."
     },
-    label: "Team-Based Development",
+    label: "Team project",
     link: "https://esraahamrawy.github.io/degetai-center/#/",
     img: "DC.png",
     color: 'rgba(132, 60, 188,0.15)'
   },
   {
     title: "Bloom",
-    description: "Modern business platform",
+    description: "Client website",
     details: {
       overview: "Designed and developed the complete frontend for Bloom's corporate website, focusing on clean aesthetics, user experience, and brand representation.",
       achievements: [
@@ -66,14 +66,14 @@ const cardData = [
       techStack: ["JavaScript", "Bootstrap Framework", "Custom CSS", "Responsive Layouts", "Cross-browser Testing", "Performance Optimization"],
       roleNotes: "Led complete UI development for my first professional freelance engagement. Translated client requirements into a visually appealing and functional website, building all interface elements from navigation to footer. Managed project timeline and client communications independently, delivering a polished product that exceeded expectations and paved the way for future freelance opportunities."
     },
-    label: "UI Development",
+    label: "Client work",
     link: "https://www.bloom.com.jo/",
     img: "Bloom.png",
     color: 'rgba(132, 60, 188,0.15)'
   },
   {
     title: "COP 27 Conference",
-    description: "Responsive event homepage",
+    description: "Responsive event landing page",
     details: {
       overview: "A demonstration homepage for the COP 27 climate conference, showcasing my ability to translate complex designs into responsive code and integrate external APIs for dynamic content.",
       achievements: [
@@ -86,14 +86,14 @@ const cardData = [
       techStack: ["JavaScript", "Bootstrap", "REST APIs", "Responsive Design", "Design-to-Code", "Git Workflow"],
       roleNotes: "Successfully completed my first professional development task: Creating a responsive conference homepage from XD designs. This project proved my capability to work with design teams and implement precise UI specifications. The X API integration demonstrated my understanding of asynchronous data fetching and DOM manipulation. As my introduction to company development workflows, this project established my foundation in professional frontend practices."
     },
-    label: "Professional Demo",
+    label: "Professional demo",
     link: "https://cop-27.vercel.app/",
     img: "cop27.png",
     color: 'rgba(132, 60, 188,0.15)'
   },
   {
     title: "Secure Login System",
-    description: "Authentication interface",
+    description: "Login and authentication UI",
     details: {
       overview: "A comprehensive login and authentication system implementing modern security practices, form validation, and user experience best practices.",
       achievements: [
@@ -106,14 +106,14 @@ const cardData = [
       techStack: ["HTML5", "CSS3", "JavaScript", "Form Validation", "Local Storage", "Responsive Design", "Accessibility"],
       roleNotes: "Developed a complete authentication interface focusing on security, usability, and responsive design. Implemented real-time form validation with visual feedback, password strength indicators, and remember-me functionality using localStorage. This project demonstrates attention to detail in user experience and commitment to building accessible, secure web interfaces."
     },
-    label: "Authentication",
+    label: "Authentication UI",
     link: "/LoginSystem/index.html",
     img: "login.jpg",
     color: 'rgba(132, 60, 188,0.15)'
   },
   {
     title: "Bookmark Manager",
-    description: "Personal bookmark organizer",
+    description: "Bookmark management app",
     details: {
       overview: "A web-based bookmark management application allowing users to save, organize, and categorize their favorite websites with search functionality.",
       achievements: [
@@ -126,7 +126,7 @@ const cardData = [
       techStack: ["JavaScript", "Local Storage API", "CSS Grid", "DOM Manipulation", "CRUD Operations", "Event Handling"],
       roleNotes: "Designed and developed a practical bookmark management application to practice data persistence and CRUD operations. Implemented features for adding, editing, deleting, and categorizing bookmarks with local storage for data persistence. Focused on creating an intuitive user experience with efficient search and organization capabilities."
     },
-    label: "Utility App",
+    label: "Productivity app",
     link: "https://bookmark-jj5o2uztr-esraahamrawys-projects.vercel.app/",
     img: "Bookmark.jpg",
     color: 'rgba(132, 60, 188,0.15)'

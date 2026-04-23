@@ -13,7 +13,7 @@ const AppRoutes = () => {
       element: <MainLayout />,
       children: [
         {
-          index: true, // 👈 default route (when path is "/")
+          index: true,
           element: <Home />,
         },
         {

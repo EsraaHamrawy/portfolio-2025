@@ -32,7 +32,7 @@ export const ChromaGrid = ({
   const demo = [
     {
       image: udemy,
-      title: ' Material-UI',
+      title: 'Material UI',
       subtitle: 'Udemy',
       handle: '20-Apri-2025',
       borderColor: '#4F46E5',
@@ -41,8 +41,8 @@ export const ChromaGrid = ({
     },
     {
       image: eduacriveImg,
-      title: ' Reacr Hoks ',
-      subtitle: 'Eduacrive',
+      title: 'React Hooks',
+      subtitle: 'Educative',
       handle: '27-sep-2024',
       borderColor: '#4F46E5',
       gradient: 'linear-gradient(145deg, #4F46E5, #000)',
@@ -52,7 +52,7 @@ export const ChromaGrid = ({
     
     {
       image: reactAdvance,
-      title: ' Advanced React',
+      title: 'Advanced React',
       subtitle: 'Coursera',
       handle: '16-Jul-2024',
       borderColor: '#4F46E5',
@@ -61,7 +61,7 @@ export const ChromaGrid = ({
     },
     {
       image:basicsreact ,
-      title: ' React Basics',
+      title: 'React Basics',
       subtitle: 'Coursera',
       handle: '16-Jul-2024',
       borderColor: '#4F46E5',
@@ -70,7 +70,7 @@ export const ChromaGrid = ({
     },
      {
       image: javascript,
-      title: 'javascript',
+      title: 'JavaScript',
       subtitle: 'Udemy',
       handle: '15-Sep-2023',
       borderColor: '#4F46E5',
@@ -79,7 +79,7 @@ export const ChromaGrid = ({
     },
     {
       image: WebMaste,
-      title: 'Web Maste -Full Stack',
+      title: 'Web Master - Full Stack',
       subtitle: 'ITShare',
       handle: '31-Dec-2021',
       borderColor: '#4F46E5',

@@ -9,7 +9,7 @@ const PageDemoOne =() => {
         alignItems: "center",
       }}
     >
-     Demo 1 Content Wedget
+      Demo One Content Widget
      </div>
   );
 };

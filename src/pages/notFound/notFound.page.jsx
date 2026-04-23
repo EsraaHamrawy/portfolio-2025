@@ -9,7 +9,7 @@ const NotFound = () => {
         alignItems: "center",
       }}
     >
-      NotFound
+      Page not found
     </div>
   );
 };
