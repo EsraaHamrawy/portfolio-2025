@@ -1,3 +1,4 @@
+import React from "react";
 import Marquee from "react-fast-marquee";
 import "./Skills.css";
 
@@ -13,7 +14,10 @@ import react from "../../assets/Skills/React.png";
 import figma from "../../assets/Skills/Figma.png";
 import github from "../../assets/Skills/Github.png";
 
-const skillImages = [
+const Skills = () => {
+
+
+const images = [
   html,
   css,
   js,
@@ -21,21 +25,26 @@ const skillImages = [
   tailwind,
   mui,
   react,
+//   node,
+//   python,
   figma,
   github,
 ];
 
-const getAltText = (imagePath) => imagePath.split("/").pop().split(".")[0];
 
-const Skills = () => {
+  const getAltText = (imagePath) => {
+    return imagePath.split('/').pop().split('.')[0];
+  };
+
+
   return (
-    <div className="skills mt-3">
+    <div className="skills mt-3" style={{ paddingTop: "3rem" }}>
       {/* Title */}
       {/* <h2 className="text-2xl md:text-4xl font-bold bungee-shade-regular title">Skills</h2> */}
       {/* Marquee Section */}
       <div className="container">
         <Marquee speed={30} pauseOnHover={true} gradient={true} gradientWidth={0}>
-          {skillImages.map((image, index) => (
+          {images.map((image, index) => (
             <div key={index} className="mx-4 image-container">
               <img src={image} alt={getAltText(image)} className="skillicon object-contain" />
             </div>

@@ -7,15 +7,11 @@
   align-items: center;
 
  }
-  .heroSection {
-    overflow-x: hidden;
-  }
   .heroContaner{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: clamp(1.5rem, 4vw, 4rem);
+    justify-content: space-between !important;
   
   }
 
@@ -28,9 +24,6 @@
   .currentWork{
     color: var(--color-primary);
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .4rem;
   }
   .heroText h1 {
     font-size: 3rem;
@@ -41,21 +34,20 @@
     margin: .7rem 0;
   }
   .MyWorklogo{
-    width: clamp(4.5rem, 18vw, 6rem);
+    width: 6rem;
     /* height: 3rem; */
   }
   .smallResume {
     margin-bottom: 1rem !important;
-    max-width: 42rem;
-    line-height: 1.8;
   }
   
   .socialMedia {
     display: inline-flex;
     align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: .75rem;
+    justify-content: space-between;
+    gap: 1rem;
+    /* padding-top: 2rem; */
+    /* padding-left: 1rem; */
     padding-bottom: 1rem;
   }
   
@@ -63,121 +55,6 @@
   .socialMedia span {
     font-size: 3rem;
     width: 3.5rem;
-  }
-
-  .heroActions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .75rem;
-  }
-
-  .hiringLinksSection {
-    width: 100%;
-    gap: 1rem;
-  }
-
-  .hiringLinksCopy {
-    max-width: 54rem;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 1.8;
-  }
-
-  .linkPillRow {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: .75rem;
-    margin-top: .5rem;
-  }
-
-  .signalSectionTitle {
-    width: 100%;
-    margin: 1.25rem 0 .25rem;
-    text-align: left;
-    color: var(--color-primary);
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-  }
-
-  .signalGrid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
-    margin-top: .5rem;
-  }
-
-  .signalCard {
-    display: flex;
-    flex-direction: column;
-    gap: .85rem;
-    min-height: 100%;
-    padding: 1.25rem;
-    border-radius: 1rem;
-    background: rgba(132, 60, 188, 0.14);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 0 3px rgba(255, 255, 255, 0.1), 0 0 3px rgba(138, 43, 226, 0.22);
-    backdrop-filter: blur(12px);
-  }
-
-  .signalBadge {
-    width: fit-content;
-    padding: .35rem .7rem;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: rgba(255, 255, 255, 0.8);
-    font-size: .78rem;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-  }
-
-  .signalCardTitle {
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #fff;
-  }
-
-  .signalCardText {
-    margin: 0;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.78);
-  }
-
-  .signalPills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .5rem;
-  }
-
-  .signalPill {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: .35rem .7rem;
-    border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(255, 255, 255, 0.04);
-    color: rgba(255, 255, 255, 0.82);
-    font-size: .78rem;
-    text-decoration: none;
-    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-  }
-
-  .signalPill:hover {
-    transform: translateY(-1px);
-    border-color: rgba(255, 255, 255, 0.22);
-    background: rgba(255, 255, 255, 0.08);
-  }
-
-  .signalActions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .75rem;
-    margin-top: .15rem;
   }
   
   .button {
@@ -221,7 +98,7 @@
   }
   .heroImage img {
     width: 100%;
-    max-width: min(100%, 34rem);
+    max-width: 70%;       /* Prevent over-expanding */
     display: block;
     margin-left: auto;
   }
@@ -254,11 +131,7 @@
   .delay800 {
     animation-delay: 0.8s;
   }
-
-  .delay900 {
-    animation-delay: 0.9s;
-  }
-
+  
   .delay1000 {
     animation-delay: 1s;
   }
@@ -279,169 +152,31 @@
       transform: translateX(0);
     }
   }
-
-  @media (max-width: 768px) {
-    .fadeInUp {
-      transform: translateY(14px);
-      animation-duration: 0.55s;
-    }
-
-    .fadeInRight {
-      transform: translateX(14px);
-      animation-duration: 0.55s;
-    }
-
-    .delay200 {
-      animation-delay: 0.08s;
-    }
-
-    .delay400 {
-      animation-delay: 0.16s;
-    }
-
-    .delay600 {
-      animation-delay: 0.24s;
-    }
-
-    .delay800 {
-      animation-delay: 0.32s;
-    }
-
-    .delay900 {
-      animation-delay: 0.36s;
-    }
-
-    .delay1000 {
-      animation-delay: 0.4s;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .fadeInUp,
-    .fadeInRight {
-      animation: none;
-      opacity: 1;
-      transform: none;
-    }
-
-    .delay200,
-    .delay400,
-    .delay600,
-    .delay800,
-    .delay900,
-    .delay1000 {
-      animation-delay: 0s;
-    }
-
-    .skillCard,
-    .button,
-    .heroImage img {
-      transition: none;
-    }
-  }
   
   @media (max-width: 960px) {
-    .heroContaner {
-      flex-direction: column;
-      align-items: center;
+    .container {
+      display: block;
+      margin-top: 15%;
     }
-
-    .heroText {
-      width: 100%;
-      text-align: center;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-    }
-
+  
     .heroText h1 {
-      font-size: clamp(2.5rem, 8vw, 4.25rem);
-      line-height: 1.05;
-    }
-
-    .heroActions {
-      justify-content: center;
-    }
-
-    .socialMedia {
-      justify-content: center;
+      font-size: 5rem;
     }
   
     .heroImage {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
-    .heroImage div {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-
-    .heroImage img {
-      max-width: min(100%, 26rem);
-      margin: 0 auto;
+      display: none;
     }
   }
+  
   @media (max-width: 600px) {
-    .heroText h1 {
-      font-size: clamp(2.1rem, 11vw, 3rem);
-    }
-
-    .heroText p,
-    .smallResume {
-      font-size: 0.98rem;
-    }
-
-    .heroActions {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      gap: .75rem;
-    }
-
-    .linkPillRow,
-    .signalActions {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .heroActions > * {
-      width: 100%;
-      margin-right: 0 !important;
-    }
-
-    .linkPillRow > *,
-    .signalActions > * {
-      width: 100%;
-      margin-right: 0 !important;
-    }
-
-    .socialMedia img,
-    .socialMedia span {
-      width: 3rem;
-      font-size: 2.4rem;
-    }
-
-    .heroImage img {
-      max-width: 100%;
+    .container {
+      margin-top: 35%;
     }
   }
+  
   @media (max-width: 480px) {
-    .heroSection {
-      padding-inline: 1rem;
-    }
-
-    .heroText {
-      gap: .25rem;
-    }
-
-    .smallResume {
-      line-height: 1.7;
+    .container {
+      margin-top: 45%;
     }
   }
   /* {✅ SKILLS SECTION} */
@@ -492,3 +227,4 @@
       font-size: 0.9rem;
     }
   }
+  

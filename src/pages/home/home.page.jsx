@@ -1,33 +1,41 @@
 import { Grid } from "@mui/material";
-import { Suspense, lazy } from "react";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+
+import Experiences from "../Experiences/Experiences.jsx"
+import ContactMe from "../Contact/Contact.jsx";
+import Skills from "../Skills/Skills.jsx";
+import ChromaGrid from "../Certifications/Certifications.jsx"
 import cv  from "../../assets/Esraa Alhamrawy Frontend Developer.pdf"
-import { useMotionSafety } from "../../utils/motion.js";
+import { slideIn } from "../../utils/motion.js";
 import style from "./Hero.module.css";
 import { styles } from "../../styles";
 import Illustration from "../../assets/Programming(3).svg";
+import Skils from "../../assets/Skills .svg";
 import MyWork from "../../assets/plennixLogo.svg";
 import Hello from "../../assets/Hello.gif";
 import Socialmedia from "../../components/layout/socialmedia/socialmedia.component.jsx";
+import Card from "../../components/layout/socialmedia/newSocial.jsx";
+import MagicBento from "../../components/general/MagicBento/MagicBento.jsx";
+import Plasma from "../../components/general/Plasma/Plasma.jsx";
 import DynamicButton from "../../components/general/dynamicButton/DynamicButton.jsx";
-import DeferredMount from "../../components/general/deferredMount/DeferredMount.jsx";
-
-const Experiences = lazy(() => import("../Experiences/Experiences.jsx"));
-const ContactMe = lazy(() => import("../Contact/Contact.jsx"));
-const Skills = lazy(() => import("../Skills/Skills.jsx"));
-const ChromaGrid = lazy(() => import("../Certifications/Certifications.jsx"));
-const MagicBento = lazy(() => import("../../components/general/MagicBento/MagicBento.jsx"));
-
+import Html from "../../assets/icons8-html-5-48.png";
+import Css from "../../assets/icons8-css-48.png";
+import Js from "../../assets/icons8-js-48.png";
+import React from "../../assets/icons8-react-48.png";
+import bootstrap from "../../assets/icons8-bootstrap-48.png";
+import Redux from "../../assets/icons8-redux-50.png";
+import github from "../../assets/icons8-github-logo-48.png";
+import {textVariant} from "../../utils/motion.js"
+import BackToTopButton from "../../components/general/backToTopButton/BackToTopButton.jsx";
 const Home = () => {
-  const { isCompactViewport, shouldReduceMotion } = useMotionSafety();
-
   const scrollToContact = () => {
     const section = document.getElementById('Contact');
     section?.scrollIntoView({ behavior: 'smooth' });
   };
   return (
     <>
-      <section className={`sm:px-16 px-6 sm:py-16 py-10 ${style.heroSection}`} id="home" aria-labelledby="hero-title">
+      <section className={" sm:px-16 px-6 sm:py-16 py-10"} id="home" aria-labelledby="hero-title">
         <Grid container      spacing={2} className={style.heroContaner}>
           <Grid item xs={12} md={6} className={style.heroText}>
             <div className={style.fadeInUp}>
@@ -42,6 +50,7 @@ const Home = () => {
               
             </div>
             <div className={`${style.fadeInUp} ${style.delay600}`}>
+               <BackToTopButton />
               <p className={style.smallResume}>
                 I’m a frontend developer with <span className={style.colorText}>3 years of experience</span> building
                 responsive, accessible interfaces with React and JavaScript. I value clean design, practical
@@ -60,7 +69,7 @@ const Home = () => {
               <Socialmedia />
               </div>
             </div>
-            <div className={`${style.fadeInUp} ${style.delay800} ${style.heroActions}`} >
+            <div className={`${style.fadeInUp} ${style.delay800}`} >
             <DynamicButton text="Contact Me" onClick={scrollToContact} />
             <DynamicButton href={cv} text="View Resume" active={true} target="_blank" rel="noreferrer" />
             </div>
@@ -72,38 +81,11 @@ const Home = () => {
           </Grid>
         </Grid>
       </section>
-      <section className={`${style.container} ${style.hiringLinksSection} ${style.fadeInUp} ${style.delay1000}`} id="hiring-links" aria-labelledby="hiring-links-heading">
-        <p className={`${styles.sectionSubText} text-center`}>Recruiter quick links</p>
-        <h2 id="hiring-links-heading" className={`${styles.sectionHeadText} text-center`}>Open the work</h2>
-        <p className={style.hiringLinksCopy}>
-          Fast paths to the live projects, process notes, and profiles hiring teams usually ask for first.
-        </p>
-        <div className={style.linkPillRow}>
-          <Link to="/showcase" className={style.signalPill}>
-            View live projects
-          </Link>
-          <Link to="/highlights" className={style.signalPill}>
-            How I work
-          </Link>
-          <a href={cv} target="_blank" rel="noreferrer" className={style.signalPill}>
-            Resume
-          </a>
-          <a href="https://www.linkedin.com/in/esraa-hamrawy" target="_blank" rel="noopener noreferrer" className={style.signalPill}>
-            LinkedIn
-          </a>
-          <a href="https://github.com/EsraaHamrawy" target="_blank" rel="noopener noreferrer" className={style.signalPill}>
-            GitHub
-          </a>
-        </div>
-      </section>
       <section id="experiences">
-        <DeferredMount>
-          <Suspense fallback={null}>
-            <Experiences />
-          </Suspense>
-        </DeferredMount>
-      </section>
+       <Experiences />
+    </section> 
 
+     
       <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}` } id="skills" aria-labelledby="skills-heading">
           <p className={`${styles.sectionSubText} text-center`}>Core skills</p>
           <h2 id="skills-heading" className={`${styles.sectionHeadText} text-center`}>Skills</h2>
@@ -112,11 +94,7 @@ const Home = () => {
             These are the <span className={style.colorText}>tools I use to turn ideas into</span> polished, responsive interfaces. <span className={style.colorText}>They help me build</span> products that feel clear, fast, and easy to use.
                   </p>
             </div>
-            <DeferredMount>
-              <Suspense fallback={null}>
-                <Skills />
-              </Suspense>
-            </DeferredMount>
+            <Skills />
       </section>
 
     <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}` } id="Certifications" aria-labelledby="certifications-heading">
@@ -124,11 +102,7 @@ const Home = () => {
       <h2 id="certifications-heading" className={`${styles.sectionHeadText} text-center`}>Certifications</h2>
         <div className={`${style.skilscontainer} ${style.delay1000}`}>
         </div>
-      <DeferredMount>
-        <Suspense fallback={null}>
-          <ChromaGrid />
-        </Suspense>
-      </DeferredMount>
+      <ChromaGrid />
       </section>
 
        <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}`} id={"projects"} aria-labelledby="projects-heading">
@@ -137,36 +111,27 @@ const Home = () => {
       <p className={`${styles.sectionSubText}  text-center`}>Selected case studies</p>
       <h2 id="projects-heading" className={`${styles.sectionHeadText}  text-center`}>Case Studies</h2>
       </div>
-      <DeferredMount>
-        <Suspense fallback={null}>
-          <MagicBento
-            textAutoHide={true}
-            enableStars={true}
-            enableSpotlight={true}
-            enableBorderGlow={true}
-            enableTilt={true}
-            enableMagnetism={true}
-            clickEffect={true}
-            disableAnimations={shouldReduceMotion}
-            spotlightRadius={isCompactViewport ? 180 : 300}
-            particleCount={isCompactViewport ? 6 : 12}
-            glowColor="132, 0, 255"
-          />
-        </Suspense>
-      </DeferredMount>
+      <MagicBento 
+        textAutoHide={true}
+        enableStars={true}
+        enableSpotlight={true}
+        enableBorderGlow={true}
+        enableTilt={true}
+        enableMagnetism={true}
+        clickEffect={true}
+        spotlightRadius={300}
+        particleCount={12}
+        glowColor="132, 0, 255"
+      />
       </section>
 
     
 
 
 
-    <section className="sm:px-16 px-6 sm:py-16 py-10"   id="Contact" aria-labelledby="contact-heading" >
-       <DeferredMount>
-         <Suspense fallback={null}>
-           <ContactMe />
-         </Suspense>
-       </DeferredMount>
-    </section>
+     <section className="sm:px-16 px-6 sm:py-16 py-10"   id="Contact" aria-labelledby="contact-heading" >
+      <ContactMe />
+      </section>
 
 
  

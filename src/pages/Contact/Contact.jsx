@@ -7,13 +7,12 @@ import { styles } from "../../styles.js";
 import Alert from "../../components/general/alert/alert";
 // import { EarthCanvas } from "../../canvas";
 import { SectionWrapper } from "../../hoc";
-import { slideIn, useMotionSafety } from "../../utils/motion.js";
+import { slideIn } from "../../utils/motion.js";
 
 
 
 
 const ContactMe = () => {
-    const { shouldToneDownMotion } = useMotionSafety();
     const formRef = useRef();
     const [form, setForm] = useState({
       name: "",
@@ -155,7 +154,7 @@ const ContactMe = () => {
         
     
         <motion.div
-          variants={slideIn("center", "tween", 0.2, 1, shouldToneDownMotion)}
+          variants={slideIn("center", "tween", 0.2, 1)}
           className={`${styles.formcontainer} flex-[0.75] `}
         >
 
