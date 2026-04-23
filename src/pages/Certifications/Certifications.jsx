@@ -13,6 +13,63 @@ import ReactAdvance from "../../assets/Certifications/Coursera Advanced React.pd
  import BasicsReact from "../../assets/Certifications/Coursera React Basics.pdf";
  import ITShare from "../../assets/Certifications/ITShare-Web Master -Full Stack.pdf"
 
+const demoItems = [
+  {
+    image: udemy,
+    title: 'Material UI',
+    subtitle: 'Udemy',
+    handle: '20-Apri-2025',
+    borderColor: '#4F46E5',
+    gradient: 'linear-gradient(145deg, #4F46E5, #000)',
+    url: "https://www.udemy.com/certificate/UC-0419b9ca-576f-41a3-b0a2-8bf2967c006a/",
+  },
+  {
+    image: eduacriveImg,
+    title: 'React Hooks',
+    subtitle: 'Educative',
+    handle: '27-sep-2024',
+    borderColor: '#4F46E5',
+    gradient: 'linear-gradient(145deg, #4F46E5, #000)',
+    url: "https://www.educative.io/verify-certificate/PQq49pPNXrmsNQpqLmAZzwumXx9L8o0XjTl",
+  },
+  {
+    image: reactAdvance,
+    title: 'Advanced React',
+    subtitle: 'Coursera',
+    handle: '16-Jul-2024',
+    borderColor: '#4F46E5',
+    gradient: 'linear-gradient(145deg, #4F46E5, #000)',
+    url: ReactAdvance,
+  },
+  {
+    image: basicsreact,
+    title: 'React Basics',
+    subtitle: 'Coursera',
+    handle: '16-Jul-2024',
+    borderColor: '#4F46E5',
+    gradient: 'linear-gradient(145deg, #4F46E5, #000)',
+    url: BasicsReact,
+  },
+  {
+    image: javascript,
+    title: 'JavaScript',
+    subtitle: 'Udemy',
+    handle: '15-Sep-2023',
+    borderColor: '#4F46E5',
+    gradient: 'linear-gradient(145deg, #4F46E5, #000)',
+    url: "https://www.udemy.com/certificate/UC-29a6acc8-00ee-410c-befd-aa4a0f7c3ac9/",
+  },
+  {
+    image: WebMaste,
+    title: 'Web Master - Full Stack',
+    subtitle: 'ITShare',
+    handle: '31-Dec-2021',
+    borderColor: '#4F46E5',
+    gradient: 'linear-gradient(145deg, #4F46E5, #000)',
+    url: ITShare,
+  },
+];
+
 export const ChromaGrid = ({
   items,
   className = '',
@@ -29,65 +86,7 @@ export const ChromaGrid = ({
   const setY = useRef(null);
   const pos = useRef({ x: 0, y: 0 });
 
-  const demo = [
-    {
-      image: udemy,
-      title: 'Material UI',
-      subtitle: 'Udemy',
-      handle: '20-Apri-2025',
-      borderColor: '#4F46E5',
-      gradient: 'linear-gradient(145deg, #4F46E5, #000)',
-      url: "https://www.udemy.com/certificate/UC-0419b9ca-576f-41a3-b0a2-8bf2967c006a/",
-    },
-    {
-      image: eduacriveImg,
-      title: 'React Hooks',
-      subtitle: 'Educative',
-      handle: '27-sep-2024',
-      borderColor: '#4F46E5',
-      gradient: 'linear-gradient(145deg, #4F46E5, #000)',
-      url: "https://www.educative.io/verify-certificate/PQq49pPNXrmsNQpqLmAZzwumXx9L8o0XjTl",
-    },
-   
-    
-    {
-      image: reactAdvance,
-      title: 'Advanced React',
-      subtitle: 'Coursera',
-      handle: '16-Jul-2024',
-      borderColor: '#4F46E5',
-      gradient: 'linear-gradient(145deg, #4F46E5, #000)',
-      url: ReactAdvance,
-    },
-    {
-      image:basicsreact ,
-      title: 'React Basics',
-      subtitle: 'Coursera',
-      handle: '16-Jul-2024',
-      borderColor: '#4F46E5',
-      gradient: 'linear-gradient(145deg, #4F46E5, #000)',
-      url: BasicsReact
-    },
-     {
-      image: javascript,
-      title: 'JavaScript',
-      subtitle: 'Udemy',
-      handle: '15-Sep-2023',
-      borderColor: '#4F46E5',
-      gradient: 'linear-gradient(145deg, #4F46E5, #000)',
-      url: "https://www.udemy.com/certificate/UC-29a6acc8-00ee-410c-befd-aa4a0f7c3ac9/", 
-    },
-    {
-      image: WebMaste,
-      title: 'Web Master - Full Stack',
-      subtitle: 'ITShare',
-      handle: '31-Dec-2021',
-      borderColor: '#4F46E5',
-      gradient: 'linear-gradient(145deg, #4F46E5, #000)',
-      url:ITShare
-    }
-  ];
-  const data = items?.length ? items : demo;
+  const data = items?.length ? items : demoItems;
 
   useEffect(() => {
     const el = rootRef.current;

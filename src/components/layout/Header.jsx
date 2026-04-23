@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react"; 
 import { AppBar, Box, Toolbar, IconButton, Typography, Drawer, List, ListItem, ListItemButton, ListItemText, ListItemIcon, Tooltip, Button } from "@mui/material"; 
-import { FaBars, FaHome, FaInfoCircle, FaProjectDiagram, FaChartBar, FaAward, FaEnvelope, FaCode, FaTimes, FaSun, FaMoon } from "react-icons/fa"; 
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa"; 
-import { RiTwitterXFill } from "react-icons/ri"; 
+import { FaBars, FaInfoCircle, FaProjectDiagram, FaChartBar, FaEnvelope, FaCode, FaTimes } from "react-icons/fa";
 import Footer from "./footer/footer";
 
 // Navigation items with section IDs

@@ -13,7 +13,7 @@ import { slideIn, useMotionSafety } from "../../utils/motion.js";
 
 
 const ContactMe = () => {
-    const { shouldReduceMotion, shouldToneDownMotion } = useMotionSafety();
+    const { shouldToneDownMotion } = useMotionSafety();
     const formRef = useRef();
     const [form, setForm] = useState({
       name: "",

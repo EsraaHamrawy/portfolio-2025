@@ -14,11 +14,12 @@ const BackToTopButton = () => {
     }
 
     const handleScroll = () => {
-      setIsVisible(scrollContainer.scrollTop > 300);
+      const nextVisible = scrollContainer.scrollTop > 300;
+      setIsVisible((current) => (current === nextVisible ? current : nextVisible));
     };
 
     handleScroll();
-    scrollContainer.addEventListener("scroll", handleScroll);
+    scrollContainer.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       scrollContainer.removeEventListener("scroll", handleScroll);

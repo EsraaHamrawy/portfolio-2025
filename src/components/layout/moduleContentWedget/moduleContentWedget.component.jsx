@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */ 
 import styles from "./moduleContentWedget.module.css";
 import Footer from "../footer/footer";
-import Card from "../../../components/layout/socialmedia/newSocial"
 const ModuleContentWedget = ({ children }) => {
   return (
     

@@ -1,14 +1,44 @@
+import { lazy, Suspense, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
 import styles from "./mainLayout.module.css";
 import ModuleContentWedget from "../moduleContentWedget/moduleContentWedget.component";
-import LiquidEther from "../../../components/general/LiquidEther/LiquidEther.jsx";
 import BackToTopButton from "../../../components/general/backToTopButton/BackToTopButton.jsx";
 import Header from "../../layout/Header.jsx";
 import { useMotionSafety } from "../../../utils/motion.js";
 
+const LiquidEther = lazy(() =>
+  import("../../../components/general/LiquidEther/LiquidEther.jsx")
+);
+
 const MainLayout = () => {
   const { isCompactViewport, shouldReduceMotion } = useMotionSafety();
+  const [renderBackground, setRenderBackground] = useState(false);
+  const shouldRenderBackground = !shouldReduceMotion && !isCompactViewport;
+
+  useEffect(() => {
+    if (!shouldRenderBackground) {
+      setRenderBackground(false);
+      return undefined;
+    }
+
+    if (typeof window === "undefined") return undefined;
+
+    if (renderBackground) {
+      return undefined;
+    }
+
+    const activate = () => setRenderBackground(true);
+
+    if ("requestIdleCallback" in window) {
+      const handle = window.requestIdleCallback(activate, { timeout: 1500 });
+      return () => window.cancelIdleCallback(handle);
+    }
+
+    const timeoutId = window.setTimeout(activate, 0);
+    return () => window.clearTimeout(timeoutId);
+  }, [renderBackground, shouldRenderBackground]);
+
   const motionAwareProps = {
     mouseForce: shouldReduceMotion ? 0 : isCompactViewport ? 12 : 20,
     cursorSize: shouldReduceMotion ? 72 : isCompactViewport ? 84 : 100,
@@ -29,13 +59,14 @@ const MainLayout = () => {
   return (
     <div className={`${styles.pageWrapper} h-100 position-relative`}>
       <main className={`${styles.main}`}>
-        <div style={{ width: '100%',      height: '98vh', position: 'relative' }} id="allmain">
-      <LiquidEther
-        colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
-        {...motionAwareProps}
-        />
-    </div>
-    <Header />
+        <div style={{ width: '100%', height: '98vh', position: 'relative' }} id="allmain">
+          {renderBackground && shouldRenderBackground ? (
+            <Suspense fallback={null}>
+              <LiquidEther colors={['#5227FF', '#FF9FFC', '#B19EEF']} {...motionAwareProps} />
+            </Suspense>
+          ) : null}
+        </div>
+        <Header />
         <div className={`${styles.mainContent}`}>
           <ModuleContentWedget>
             <Outlet />
