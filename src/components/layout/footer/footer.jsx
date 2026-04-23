@@ -3,9 +3,9 @@ import styles from "./footer.module.css";
 import Socialmedia from "../socialmedia/socialmedia.component.jsx";
 function Footer() {
   return (
-    <div className={styles.Footer}>
-    <Socialmedia />
-  </div>
+    <footer className={styles.Footer}>
+      <Socialmedia />
+    </footer>
   )
 }
 

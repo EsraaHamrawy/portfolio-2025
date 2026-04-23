@@ -134,6 +134,12 @@ export const ChromaGrid = ({
     }
   };
 
+  const handleCardKeyDown = (event, url) => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    event.preventDefault();
+    handleCardClick(url);
+  };
+
   const handleCardMove = e => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
@@ -155,21 +161,25 @@ export const ChromaGrid = ({
       onPointerMove={handleMove}
       onPointerLeave={handleLeave}
     >
-      {data.map((c, i) => (
-        <article
-          key={i}
-          className="chroma-card"
-          onMouseMove={handleCardMove}
-          onClick={() => handleCardClick(c.url)}
-          style={{
-            '--card-border': c.borderColor || 'transparent',
-            '--card-gradient': c.gradient,
-            cursor: c.url ? 'pointer' : 'default'
-          }}
-        >
-          <div className="chroma-img-wrapper">
-            <img src={c.image} alt={c.title} loading="lazy" />
-          </div>
+        {data.map((c, i) => (
+          <article
+            key={i}
+            className="chroma-card"
+            onMouseMove={handleCardMove}
+            onClick={() => handleCardClick(c.url)}
+            onKeyDown={(event) => handleCardKeyDown(event, c.url)}
+            role={c.url ? 'button' : undefined}
+            tabIndex={c.url ? 0 : -1}
+            aria-label={`${c.title} certificate from ${c.subtitle}${c.handle ? `, issued ${c.handle}` : ''}`}
+            style={{
+              '--card-border': c.borderColor || 'transparent',
+              '--card-gradient': c.gradient,
+              cursor: c.url ? 'pointer' : 'default'
+            }}
+          >
+            <div className="chroma-img-wrapper">
+              <img src={c.image} alt={`${c.title} certificate from ${c.subtitle}`} loading="lazy" />
+            </div>
           <footer className="chroma-info">
             <h3 className="name">{c.title}</h3>
             {c.handle && <span className="handle">{c.handle}</span>}

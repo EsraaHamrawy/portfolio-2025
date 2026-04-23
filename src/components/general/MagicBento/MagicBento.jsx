@@ -583,12 +583,14 @@ const MagicBento = ({
             <div className="magic-bento-card__footer">
               <div className="info-hover">
                 <button 
+                  type="button"
                   className="magic-bento-card__button" 
                   onClick={() => handleToggleDetails(index)}
                   aria-label={activeDetailsIndex === index ? "Close project details" : "Open project details"}
                   aria-expanded={activeDetailsIndex === index}
+                  aria-haspopup="dialog"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
                     <circle cx="12" cy="12" r="10"></circle>
                     <path d="M12 16v-4"></path>
                     <path d="M12 8h.01"></path>
@@ -598,9 +600,9 @@ const MagicBento = ({
               </div>
               
               {card.link && (
-                <a href={card.link} target="_blank" rel="noopener noreferrer">
-                  <button className="magic-bento-card__button" aria-label="View project">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <a href={card.link} target="_blank" rel="noopener noreferrer" className="magic-bento-card__button" aria-label={`View ${card.title}`}>
+                  <span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                       <path
                         d="M1 12C1 12 5 4 12 4C19 4 23 12 23 12C23 12 19 20 12 20C5 20 1 12 1 12Z"
                         stroke="currentColor"
@@ -612,7 +614,7 @@ const MagicBento = ({
                         strokeWidth="2"
                       />
                     </svg>
-                  </button>
+                  </span>
                 </a>
               )}
             </div>
@@ -653,10 +655,10 @@ const MagicBento = ({
       >
         {activeCard && (
           <div className="space-y-4">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
               <img
                 src={activeCard.img}
-                alt={activeCard.title || "Project image"}
+                alt={`${activeCard.title || "Project"} screenshot`}
                 className="h-20 w-20 rounded-xl object-cover"
               />
               <div className="space-y-2">

@@ -14,6 +14,8 @@ const Alert = ({ show, type = "success", message, onClose }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
       className={`${styles.toast} ${styles[`toast--${type}`]}`}
       >
       {/* Icon */}
@@ -57,10 +59,10 @@ const Alert = ({ show, type = "success", message, onClose }) => {
       </div>
 
       {/* Message */}
-      <divv className={styles.toast__message} >{message}</divv>
+      <div className={styles.toast__message} >{message}</div>
 
       {/* Close */}
-      <button className={styles.toast__close} onClick={onClose} aria-label="Close">
+      <button type="button" className={styles.toast__close} onClick={onClose} aria-label="Close alert">
         ✕
       </button>
     </motion.div>

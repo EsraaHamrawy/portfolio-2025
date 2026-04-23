@@ -26,6 +26,7 @@ const ToggleSwitch = ({ darkMode, onToggle }) => {
           id="switch" 
           checked={!darkMode}
           onChange={onToggle}
+          aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
         />
         <div className="icon icon--moon">
           <svg
@@ -133,7 +134,7 @@ function Header() {
         <Typography variant="h6" sx={{ fontWeight: "bold", fontSize: "1.4rem", color: "white" }}>
           Portfolio
         </Typography>
-        <IconButton onClick={handleDrawerToggle} sx={{color:"#741bc7"}}>
+        <IconButton type="button" aria-label="Close navigation menu" onClick={handleDrawerToggle} sx={{color:"#741bc7"}}>
           <FaTimes />
         </IconButton>
       </Box>
@@ -196,6 +197,7 @@ function Header() {
     <Box sx={{ display: "flex" }}>
       <AppBar 
         component="nav" 
+        aria-label="Primary navigation"
         sx={{ 
           background: "transparent",
           color: "#fff",
@@ -210,6 +212,7 @@ function Header() {
         <Toolbar sx={{ justifyContent: "space-between", px: { xs: 2, md: 4 } }}>
           {/* Mobile Menu Icon */}
           <IconButton 
+            type="button"
             color="#a200ff" 
             aria-label="open drawer" 
             edge="start" 
@@ -233,6 +236,7 @@ function Header() {
           }}>
             {navItems.map((item) => (
               <Button
+                type="button"
                 key={item.text}
                 onClick={() => handleNavClick(item.id)}
                 sx={{ 

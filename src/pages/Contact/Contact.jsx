@@ -19,6 +19,7 @@ const ContactMe = () => {
       email: "",
       message: "",
     });
+    const [errors, setErrors] = useState({});
   
     const [loading, setLoading] = useState(false);
   
@@ -46,13 +47,29 @@ const ContactMe = () => {
         ...form,
         [name]: value,
       });
+      setErrors((prev) => {
+        if (!prev[name]) {
+          return prev;
+        }
+
+        const next = { ...prev };
+        delete next[name];
+        return next;
+      });
     };
   
    
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      if (!form.name || !form.email || !form.message) {
+      const nextErrors = {};
+
+      if (!form.name.trim()) nextErrors.name = true;
+      if (!form.email.trim()) nextErrors.email = true;
+      if (!form.message.trim()) nextErrors.message = true;
+
+      if (Object.keys(nextErrors).length > 0) {
+        setErrors(nextErrors);
         setAlert({
           show: true,
           type: "warning",
@@ -92,6 +109,7 @@ const ContactMe = () => {
               email: "",
               message: "",
             });
+            setErrors({});
           },
           (error) => {
             setLoading(false);
@@ -112,7 +130,7 @@ const ContactMe = () => {
       <>
   
         <p className={`${styles.sectionSubText} text-center`}>Open to new opportunities</p>
-        <h3 className={`${styles.sectionHeadText} text-center`}>Contact</h3>
+        <h2 id="contact-heading" className={`${styles.sectionHeadText} text-center`}>Contact</h2>
       <div className={"flex justify-center sm:py-6 py-5 " }>
       <Socialmedia />
       </div>
@@ -144,38 +162,54 @@ const ContactMe = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
+            aria-labelledby="contact-heading"
+            aria-busy={loading}
             className='mt-2  flex-col gap-8 '
           >
-            <label className='flex flex-col'>
+            <label htmlFor='contact-name' className='flex flex-col'>
               <span className='text-white font-medium mb-4'>Name</span>
               <input
+                id='contact-name'
                 type='text'
                 name='name'
                 value={form.name}
                 onChange={handleChange}
+                autoComplete='name'
                 placeholder="Your name"
+                required
+                aria-required='true'
+                aria-invalid={Boolean(errors.name)}
                 className='bg-[rgba(132,60,188,0.15)] mb-4 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
-            <label className='flex flex-col'>
+            <label htmlFor='contact-email' className='flex flex-col'>
               <span className='text-white font-medium mb-4'>Email</span>
               <input
+                id='contact-email'
                 type='email'
                 name='email'
                 value={form.email}
                 onChange={handleChange}
+                autoComplete='email'
                 placeholder="your.email@example.com"
+                required
+                aria-required='true'
+                aria-invalid={Boolean(errors.email)}
                 className='bg-[rgba(132,60,188,0.15)] mb-4 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               />
             </label>
-            <label className='flex flex-col'>
+            <label htmlFor='contact-message' className='flex flex-col'>
               <span className='text-white font-medium mb-4'>Message</span>
               <textarea
+                id='contact-message'
                 rows={5}
                 name='message'
                 value={form.message}
                 onChange={handleChange}
                 placeholder='Tell me about your role, team, or project'
+                required
+                aria-required='true'
+                aria-invalid={Boolean(errors.message)}
                 className='bg-[rgba(132,60,188,0.15)] mb-4 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
               />
             </label>

@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Container from "@mui/material/Container";
+import MenuIcon from "@mui/icons-material/Menu";
 import styles from "./homeheder.module.css";
 import AppLogo from "../../general/appLogo/appLogo.component";
 import User from "../../general/user/user.component";
@@ -16,11 +17,13 @@ function Homeheade() {
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="Open user menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               color="inherit"
-            ></IconButton>
+            >
+              <MenuIcon />
+            </IconButton>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}></Box>
           <Box sx={{ flexGrow: 0 }}>

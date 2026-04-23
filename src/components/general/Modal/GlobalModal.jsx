@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
 const GlobalModal = ({ open, onClose, title, children }) => {
+  const dialogRef = useRef(null);
+
   useEffect(() => {
     if (!open) return;
 
@@ -12,6 +14,7 @@ const GlobalModal = ({ open, onClose, title, children }) => {
     const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     document.addEventListener("keydown", handleKeyDown);
+    setTimeout(() => dialogRef.current?.focus(), 0);
 
     return () => {
       document.body.style.overflow = originalOverflow;
@@ -22,12 +25,17 @@ const GlobalModal = ({ open, onClose, title, children }) => {
   if (!open) return null;
 
   return createPortal(
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 px-4 py-6 backdrop-blur-sm">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 px-4 py-6 backdrop-blur-sm" role="presentation">
       <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="project-modal-title"
+        tabIndex={-1}
         className="relative w-[min(92vw,760px)] max-h-[85vh] overflow-hidden rounded-2xl border border-white/10 bg-[rgba(132,60,188,0.15)] text-white shadow-2xl backdrop-blur-md"
       >
         <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
-          <h3 className="text-lg font-semibold">{title}</h3>
+          <h3 id="project-modal-title" className="text-lg font-semibold">{title}</h3>
           <button
             type="button"
             onClick={onClose}

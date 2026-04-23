@@ -36,24 +36,20 @@ const Home = () => {
   };
   return (
     <>
- 
-      {/* ✅ HERO SECTION */}
-
-  <section className={" sm:px-16 px-6 sm:py-16 py-10"} id="home" >
+      <section className={" sm:px-16 px-6 sm:py-16 py-10"} id="home" aria-labelledby="hero-title">
         <Grid container      spacing={2} className={style.heroContaner}>
           {/* Left Side: Text */}
           <Grid item xs={12} md={6} className={style.heroText}>
             <div className={style.fadeInUp}>
-            <img src={Hello} alt="Hello" width="20px" />
+            <img src={Hello} alt="" aria-hidden="true" width="20px" />
               <p>Hello, I'm</p>
             </div>
             <div className={`${style.fadeInUp} ${style.delay200}`}>
-              <h3 className={styles.sectionHeadText}>Esraa Hamrawy</h3>
-              {/* <h2>Esraa Hamrawy</h2> */}
+              <h1 id="hero-title" className={styles.sectionHeadText}>Esraa Hamrawy</h1>
             </div>
             <div className={`${style.fadeInUp} ${style.delay400}`}>
-              <h3>Frontend Developer</h3>
-             
+              <h2 className="text-xl font-semibold">Frontend Developer</h2>
+              
             </div>
             <div className={`${style.fadeInUp} ${style.delay600}`}>
                <BackToTopButton />
@@ -63,8 +59,8 @@ const Home = () => {
                 solutions, and strong collaboration across teams.
                 <span className={style.currentWork}>
                 Currently, I’m a frontend developer at{" "}
-                <a href="https://www.plennix.com/">
-                  <img src={MyWork} className={style.MyWorklogo} alt="MyWork" />
+                <a href="https://www.plennix.com/" aria-label="Plennix website">
+                  <img src={MyWork} className={style.MyWorklogo} alt="Plennix logo" />
                 </a>
               </span>
               </p>
@@ -83,21 +79,20 @@ const Home = () => {
           {/* Right Side: Image */}
           <Grid item xs={12} md={6} className={style.heroImage}>
             <div className={`${style.fadeInRight} ${style.delay900}`}>
-              <img src={Illustration} alt="Illustration" />
+            <img src={Illustration} alt="Frontend developer illustration" />
             </div>
           </Grid>
         </Grid>
       </section>
-{/* ✅ Experiences Me SECTION */}
-  <section  id="experiences" >
-      <Experiences />
-   </section> 
+      <section id="experiences">
+       <Experiences />
+    </section> 
 
      
       {/* ✅ SKILLS SECTION */}
-      <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}` } id="skills" >
+      <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}` } id="skills" aria-labelledby="skills-heading">
           <p className={`${styles.sectionSubText} text-center`}>Core skills</p>
-          <h3 className={`${styles.sectionHeadText} text-center`}>Skills</h3>
+          <h2 id="skills-heading" className={`${styles.sectionHeadText} text-center`}>Skills</h2>
             <div className={`${style.skilscontainer} ${style.delay1000}`}>
             <p className={style.smallResume}>
             These are the <span className={style.colorText}>tools I use to turn ideas into</span> polished, responsive interfaces. <span className={style.colorText}>They help me build</span> products that feel clear, fast, and easy to use.
@@ -108,20 +103,20 @@ const Home = () => {
       </section>
 
    {/* ✅ Certifications SECTION */}
-   <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}` } id="Certifications" >
+    <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}` } id="Certifications" aria-labelledby="certifications-heading">
       <p className={`${styles.sectionSubText} text-center`}>Selected</p>
-      <h3 className={`${styles.sectionHeadText} text-center`}>Certifications</h3>
+      <h2 id="certifications-heading" className={`${styles.sectionHeadText} text-center`}>Certifications</h2>
         <div className={`${style.skilscontainer} ${style.delay1000}`}>
         </div>
       <ChromaGrid />
       </section>
 
        {/* ✅ PROJECTS SECTION */}
-       <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}`} id={"projects"}>
-     
+       <section className={`${style.container} ${style.fadeInUp} ${style.delay1000}`} id={"projects"} aria-labelledby="projects-heading">
+      
       <div className={`${style.fadeInUp} ${style.delay400}`}>
       <p className={`${styles.sectionSubText}  text-center`}>Selected work</p>
-      <h2 className={`${styles.sectionHeadText}  text-center`}>Projects</h2>
+      <h2 id="projects-heading" className={`${styles.sectionHeadText}  text-center`}>Projects</h2>
       </div>
       <MagicBento 
         textAutoHide={true}
@@ -142,7 +137,7 @@ const Home = () => {
 
 
      {/* ✅ Contact Me SECTION */}
-     <section className="sm:px-16 px-6 sm:py-16 py-10"   id="Contact" >
+     <section className="sm:px-16 px-6 sm:py-16 py-10"   id="Contact" aria-labelledby="contact-heading" >
    
 
       {/* <div className={`${style.fadeInUp} ${style.delay400}`}>

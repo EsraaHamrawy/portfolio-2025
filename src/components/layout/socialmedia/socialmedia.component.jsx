@@ -5,15 +5,17 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 const Socialmedia = () => {
   return (
-    <div  className={styles.socialLinkContainer}>
-    
+    <nav aria-label="Social media links">
+      <div  className={styles.socialLinkContainer}>
+      
       <a
         href="https://www.linkedin.com/in/esraa-hamrawy"
         target="_blank"
         rel="noopener noreferrer"
         className={styles.socialLink}
+        aria-label="LinkedIn profile"
       >
-        <LinkedInIcon />
+        <LinkedInIcon aria-hidden="true" focusable="false" />
       </a>
       
       <a
@@ -21,8 +23,9 @@ const Socialmedia = () => {
         target="_blank"
         rel="noopener noreferrer"
         className={styles.socialLink}
+        aria-label="GitHub profile"
       >
-        <GitHubIcon />
+        <GitHubIcon aria-hidden="true" focusable="false" />
       </a>
      
       
@@ -31,11 +34,13 @@ const Socialmedia = () => {
         target="_blank"
         rel="noopener noreferrer"
         className={styles.socialLink}
+        aria-label="Send an email"
       >
-        <EmailIcon />
+        <EmailIcon aria-hidden="true" focusable="false" />
       </a>
-     
-    </div>
+      
+      </div>
+    </nav>
   )
 }
 
