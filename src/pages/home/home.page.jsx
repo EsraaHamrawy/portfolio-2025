@@ -106,9 +106,13 @@ const Home = () => {
             <div className={`${style.fadeInUp} ${style.delay600}`}>
                <BackToTopButton />
               <p className={style.smallResume}>  
-               I’m a frontend developer with <span className={style.colorText}>+ years of experience </span>  building production-ready web applications with React.js and Next.js. I turn complex requirements into scalable, high-quality interfaces through reusable architecture, efficient state management, responsive UI, and seamless API integration.
+               I’m a frontend developer with <span className={style.colorText}>+ 3 years of experience </span>  
+                building production-ready web applications with React.js and Next.js. 
+                I turn complex requirements into scalable, high-quality interfaces through reusable architecture, 
+                efficient state management, responsive UI, and seamless API integration.
                 <span className={style.currentWork}>
-                Currently open to Frontend Developer opportunities{" "}
+                Currently open to Frontend Developer opportunities
+                  /* {" "} */
                 {/* <a href="https://www.plennix.com/" aria-label="Plennix website">
                   <img src={MyWork} className={style.MyWorklogo} alt="Plennix logo" />
                 </a> */}
