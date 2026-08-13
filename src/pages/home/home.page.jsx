@@ -116,6 +116,7 @@ const Home = () => {
                 {/* <a href="https://www.plennix.com/" aria-label="Plennix website">
                   <img src={MyWork} className={style.MyWorklogo} alt="Plennix logo" />
                 </a> */}
+                  
               </span>
               </p>
               
