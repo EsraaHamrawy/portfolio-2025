@@ -52,7 +52,7 @@ const Home = () => {
             <div className={`${style.fadeInUp} ${style.delay600}`}>
                <BackToTopButton />
               {/* <p className={style.smallResume}> */}
-
+{/* 
 const Home = () => {
   const scrollToContact = () => {
     const section = document.getElementById('Contact');
@@ -75,7 +75,7 @@ const Home = () => {
               
             </div>
             <div className={`${style.fadeInUp} ${style.delay600}`}>
-               <BackToTopButton />
+               <BackToTopButton /> */}
               <p className={style.smallResume}>  
                I’m a frontend developer with <span className={style.colorText}>+ 3 years of experience </span>  
                 building production-ready web applications with React.js and Next.js. 
